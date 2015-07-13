@@ -7,6 +7,22 @@ jQuery(window).load(function() {
 	jQuery(".status").fadeOut();
         // will fade out the whole DIV that covers the website.
 	jQuery(".preloader").delay(1000).fadeOut("slow");
+
+    $.get("http://ipinfo.io", function(response) {
+        if("MX"===response.country){
+
+            $('.number').html('5566751005');
+            $('.number-alt').parent().parent().hide();
+        }else{
+            $('.number').html('3044695058');
+            $('.number-alt').parent().parent().show();
+        }
+
+        
+    }, "jsonp");
+
+
+
 })
 
 /* =================================
