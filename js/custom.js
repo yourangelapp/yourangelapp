@@ -9,21 +9,22 @@ jQuery(window).load(function() {
 	jQuery(".preloader").delay(1000).fadeOut("slow");
 
     $.get("https://freegeoip.net/json/", function(response) {
-        // console.log(response);
-        if("MX"===response.country_code){
+        if("Los Angeles".toLowerCase()===response.city.toLowerCase()){
 
             $('.number').html('5566751005');
             $('.number-alt').parent().parent().hide();
-        }else{
+
+        }else if("Miami".toLowerCase()===response.city.toLowerCase()){
+
+            $('.number').html('5566751005');
+            $('.number-alt').parent().parent().hide();
+
+        }else {
+            //if("Bogotá".toLowerCase()===response.city.toLowerCase())
             $('.number').html('3044695058');
             $('.number-alt').parent().parent().show();
         }
-
-        
     }, "jsonp");
-
-
-
 })
 
 /* =================================
@@ -63,6 +64,13 @@ $(document).ready(function() {
     scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
     filter: ':not(.external)',
     changeHash: true
+  });
+
+  $('select').selectpicker({
+    style: 'btn-info',
+      size: 3,
+      width:'50%',
+      align:'left'
   });
   
 });

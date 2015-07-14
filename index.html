@@ -48,6 +48,8 @@
     <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> -->
     <!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
     <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+    <!-- THIRD PARTY -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css">
     <!-- RESPONSIVE FIXES -->
     <link rel="stylesheet" href="css/responsive.css">
     <!--[if lt IE 9]>
@@ -78,19 +80,17 @@
                 <!-- ONLY LOGO ON HEADER -->
                 <div class="only-logo">
                     <div class="row">
-                        <div class="col-md-offset-3 col-md-6">
+                        <div class="col-md-offset-5 col-md-3">
                             <img src="images/logo.png" alt="" width="200px">
                             <h5 style="color:white;">Pide lo que se te ocurra.</h5>
                         </div>
-                        <div class="col-md-offset-2 col-md-1">
-                            <div class="btn-group">
-                                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Large button <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    ...
-                                </ul>
-                            </div>
+                        <div class="col-md-offset-1 col-md-3">
+                            I am in &nbsp
+                            <select class="selectpicker" data-width="auto">
+                                <option>Bogota'</option>
+                                <option>Los Angeles</option>
+                                <option>Miami</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -275,6 +275,8 @@
     <!-- =========================
      SCRIPTS 
 ============================== -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/i18n/defaults-*.min.js "></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/smoothscroll.js"></script> -->
     <script src="js/jquery.scrollTo.min.js"></script>
