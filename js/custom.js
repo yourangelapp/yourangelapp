@@ -3,27 +3,51 @@
 =================================== */
 // makes sure the whole site is loaded
 jQuery(window).load(function() {
-        // will first fade out the loading animation
-	jQuery(".status").fadeOut();
-        // will fade out the whole DIV that covers the website.
-	jQuery(".preloader").delay(1000).fadeOut("slow");
+    // will first fade out the loading animation
+    jQuery(".status").fadeOut();
+    // will fade out the whole DIV that covers the website.
+    jQuery(".preloader").delay(1000).fadeOut("slow");
 
-    $.get("http://ipinfo.io", function(response) {
-        if("MX"===response.country){
+    window.i18n = domI18n({
+        selector: '[data-translatable]',
+        separator: ' // ',
+        languages: ['es-bogota', 'en-losangeles', 'en-miami'],
+        defaultLanguage: 'es-bogota',
+        currentLanguage: 'es-bogota',
+    });
+    window.i18n.currentLanguage = 'es-bogota';
+
+    $.get("https://freegeoip.net/json/", function(response) {
+        if ("Los Angeles".toLowerCase() === response.city.toLowerCase()) {
 
             $('.number').html('5566751005');
             $('.number-alt').parent().parent().hide();
-        }else{
+            i18n.changeLanguage('en-losangeles');
+
+        } else if ("Miami".toLowerCase() === response.city.toLowerCase()) {
+
+            $('.number').html('5566751005');
+            $('.number-alt').parent().parent().hide();
+            i18n.changeLanguage('en-miami');
+
+        } else {
+            //if("Bogotá".toLowerCase()===response.city.toLowerCase())
             $('.number').html('3044695058');
             $('.number-alt').parent().parent().show();
+            i18n.changeLanguage('es-bogota');
         }
-
-        
     }, "jsonp");
 
-
-
+    $('.select-city').click(function(value) {
+        var currentSelection = $('.selectpicker').val();
+        if (window.i18n.currentLanguage !== currentSelection) {
+            window.i18n.changeLanguage(currentSelection);
+            window.i18n.currentLanguage = currentSelection;
+            console.log(window.i18n.currentLanguage);
+        }
+    });
 })
+
 
 /* =================================
 ===  RESPONSIVE VIDEO           ====
@@ -43,13 +67,13 @@ $('.mailchimp').ajaxChimp({
 });
 
 function mailchimpCallback(resp) {
-     if (resp.result === 'success') {
+    if (resp.result === 'success') {
         $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
         $('.subscription-error').fadeOut(500);
-        
-    } else if(resp.result === 'error') {
+
+    } else if (resp.result === 'error') {
         $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).fadeIn(1000);
-    }  
+    }
 }
 
 
@@ -58,19 +82,26 @@ function mailchimpCallback(resp) {
 =================================== */
 
 $(document).ready(function() {
-  $('.main-navigation').onePageNav({
-    scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-    filter: ':not(.external)',
-    changeHash: true
-  });
-  
+    $('.main-navigation').onePageNav({
+        scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
+        filter: ':not(.external)',
+        changeHash: true
+    });
+
+    $('select').selectpicker({
+        style: 'btn-info',
+        size: 3,
+        width: '50%',
+        align: 'left'
+    });
+
 });
 
 
 /* COLLAPSE NAVIGATION ON MOBILE AFTER CLICKING ON LINK - ADDED ON V1.5*/
 
 if (matchMedia('(max-width: 480px)').matches) {
-    $('.main-navigation a').on('click', function () {
+    $('.main-navigation a').on('click', function() {
         $(".navbar-toggle").click();
     });
 }
@@ -78,29 +109,37 @@ if (matchMedia('(max-width: 480px)').matches) {
 
 /* NAVIGATION VISIBLE ON SCROLL */
 
-$(document).ready(function () {
+$(document).ready(function() {
     mainNav();
 });
 
-$(window).scroll(function () {
+$(window).scroll(function() {
     mainNav();
 });
 
 if (matchMedia('(min-width: 992px), (max-width: 767px)').matches) {
-  function mainNav() {
+    function mainNav() {
         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'});
+        if (top > 40) $('.sticky-navigation').stop().animate({
+            "top": '0'
+        });
 
-        else $('.sticky-navigation').stop().animate({"top": '-60'});
+        else $('.sticky-navigation').stop().animate({
+            "top": '-60'
+        });
     }
 }
 
 if (matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {
-  function mainNav() {
+    function mainNav() {
         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'});
+        if (top > 40) $('.sticky-navigation').stop().animate({
+            "top": '0'
+        });
 
-        else $('.sticky-navigation').stop().animate({"top": '-120'});
+        else $('.sticky-navigation').stop().animate({
+            "top": '-120'
+        });
     }
 }
 
@@ -109,25 +148,25 @@ if (matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {
 /* =================================
 ===  DOWNLOAD BUTTON CLICK SCROLL ==
 =================================== */
-jQuery(function( $ ){
-			$('#download-button').localScroll({
-				duration:1000
-			});
-		});
+jQuery(function($) {
+    $('#download-button').localScroll({
+        duration: 1000
+    });
+});
 
 
 /* =================================
 ===  FULL SCREEN HEADER         ====
 =================================== */
 function alturaMaxima() {
-  var altura = $(window).height();
-  $(".full-screen").css('min-height',altura); 
-  
+    var altura = $(window).height();
+    $(".full-screen").css('min-height', altura);
+
 }
 
 $(document).ready(function() {
-  alturaMaxima();
-  $(window).bind('resize', alturaMaxima);
+    alturaMaxima();
+    $(window).bind('resize', alturaMaxima);
 });
 
 
@@ -136,12 +175,12 @@ $(document).ready(function() {
 =================================== */
 var scrollAnimationTime = 1200,
     scrollAnimation = 'easeInOutExpo';
-$('a.scrollto').bind('click.smoothscroll', function (event) {
+$('a.scrollto').bind('click.smoothscroll', function(event) {
     event.preventDefault();
     var target = this.hash;
     $('html, body').stop().animate({
         'scrollTop': $(target).offset().top
-    }, scrollAnimationTime, scrollAnimation, function () {
+    }, scrollAnimationTime, scrollAnimation, function() {
         window.location.hash = target;
     });
 });
@@ -150,17 +189,16 @@ $('a.scrollto').bind('click.smoothscroll', function (event) {
 /* =================================
 ===  WOW ANIMATION             ====
 =================================== */
-wow = new WOW(
-  {
+wow = new WOW({
     mobile: false
-  });
+});
 wow.init();
 
 
 /* =================================
 ===  OWL CROUSEL               ====
 =================================== */
-$(document).ready(function () {
+$(document).ready(function() {
 
     $("#feedbacks").owlCarousel({
 
@@ -188,7 +226,7 @@ $(document).ready(function () {
 /* =================================
 ===  Nivo Lightbox              ====
 =================================== */
-$(document).ready(function () {
+$(document).ready(function() {
 
     $('#screenshots a').nivoLightbox({
         effect: 'fadeScale',
@@ -200,7 +238,7 @@ $(document).ready(function () {
 /* =================================
 ===  SUBSCRIPTION FORM          ====
 =================================== */
-$("#subscribe").submit(function (e) {
+$("#subscribe").submit(function(e) {
     e.preventDefault();
     var email = $("#subscriber-email").val();
     var dataString = 'email=' + email;
@@ -215,7 +253,7 @@ $("#subscribe").submit(function (e) {
             type: "POST",
             url: "subscribe/subscribe.php",
             data: dataString,
-            success: function () {
+            success: function() {
                 $('.subscription-success').fadeIn(1000);
                 $('.subscription-error').fadeOut(500);
                 $('.hide-after').fadeOut(500);
@@ -234,7 +272,7 @@ $("#subscribe").submit(function (e) {
 /* =================================
 ===  CONTACT FORM          ====
 =================================== */
-$("#contact").submit(function (e) {
+$("#contact").submit(function(e) {
     e.preventDefault();
     var name = $("#name").val();
     var email = $("#email").val();
@@ -252,7 +290,7 @@ $("#contact").submit(function (e) {
             type: "POST",
             url: "sendmail.php",
             data: dataString,
-            success: function () {
+            success: function() {
                 $('.success').fadeIn(1000);
                 $('.error').fadeOut(500);
             }
@@ -281,11 +319,11 @@ $('.expand-form').simpleexpand({
 ===  Bootstrap Internet Explorer 10 in Windows 8 and Windows Phone 8 FIX
 =================================== */
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-  var msViewportStyle = document.createElement('style')
-  msViewportStyle.appendChild(
-    document.createTextNode(
-      '@-ms-viewport{width:auto!important}'
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+        document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+        )
     )
-  )
-  document.querySelector('head').appendChild(msViewportStyle)
+    document.querySelector('head').appendChild(msViewportStyle)
 }

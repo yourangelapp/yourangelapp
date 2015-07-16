@@ -48,11 +48,13 @@
     <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> -->
     <!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
     <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+    <!-- THIRD PARTY -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css">
     <!-- RESPONSIVE FIXES -->
     <link rel="stylesheet" href="css/responsive.css">
     <!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<script src="js/respond.min.js"></script>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
 <![endif]-->
     <!-- JQUERY -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -72,38 +74,40 @@
         <!-- SOLID COLOR BG -->
         <div class="solid-color">
             <!-- To make header full screen. Use .full-screen class with solid-color. Example: <div class="solid-color full-screen">  -->
+            <div class="row">&nbsp</div>
             <!-- CONTAINER -->
             <div class="container">
                 <!-- ONLY LOGO ON HEADER -->
                 <div class="only-logo">
-                    <div class="navbar">
-                        <div class="navbar-header">
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-3">
                             <img src="images/logo.png" alt="" width="200px">
-                            <h5>Pide lo que se te ocurra.</h5>
+                            <h5 style="color:white;" data-translatable>Domicilios On-Demand, te llevamos todo lo que quieras! // Whatever you want On-Demand // Whatever you want On-Demand</h5>
+                        </div>
+                        <div class="col-md-offset-1 col-md-3">
+                            I am in &nbsp
+                            <select class="selectpicker select-city" data-width="auto">
+                                <option value="es-bogota">Bogotá</option>
+                                <option value="en-losangeles">Los Angeles</option>
+                                <option value="en-miami">Miami</option>
+                            </select>
                         </div>
                     </div>
                 </div>
                 <!-- /END ONLY LOGO ON HEADER -->
                 <div class="row home-contents">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-6 col-sm-6 col-xs-12" data-translatable>
                         <!-- HEADING AND BUTTONS -->
                         <div class="intro-section">
-                            <!-- WELCOM MESSAGE -->
-                            <!-- <h1 class="intro">Present your app in beautiful way with Kane.</h1> -->
-                            <p class="h3"><strong>Tenemos un ejército</strong> de personas entrenadas, para responder todas tus solicitudes. Pide lo que quieras, siempre y cuando sea legal.</p>
-                            <p class="h3">Escríbenos por Whatsapp lo que quieres pedir. ¡Es así de fácil!</p>
-                            <p class="h3">Escribe al <span class="number">3044695058</span></p>
-                            <p class="h3"><small>También al <span class="number-alt">3016641983</span></small></p>
-                            <!-- <p class="h3">¿Estás en México? <a href="javascript:void(0)" onclick="toggleNumber()">Haz clic aquí</a></p> -->
-                            <p class="h3">¡Baja la App ahora!</p>
-                            <a href="https://itunes.apple.com/us/app/kiwi-pide-lo-que-se-te-ocurra/id1005138385?mt=8" target="_blank"><img src="images/AppStore350.png" class="app" width="180px"></a>
-                            <!-- BUTTON -->
-                            <!--  <div class="buttons" id="download-button">
-                                <a href="#download" class="btn btn-default btn-lg standard-button"><i class="icon-app-download"></i>Download App</a>
-                            </div> -->
+                            <p class="h2"><strong>Bienvenido a AngelApp!</strong></p>
+                            <p class="h3">Cuando quieras algo, simplemente envíanos un mensaje a
+                                <br>
+                                <br><i class="fa-whatsapp fa"></i><strong>(+57) 315 295 0725</strong> via WhatsApp
+                                <br>
+                                <br> y te llevaremos tu pedido en menos de 1Hr, Servicio 24Hrs.
+                            </p>
                             <!-- /END BUTTONS -->
                         </div>
-                        <!-- /END HEADNING AND BUTTONS -->
                     </div>
                     <div class="visible-xs-1">
                         <div>&nbsp</div>
@@ -111,7 +115,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <!-- PHONE IMAGE WILL BE HIDDEN IN TABLET PORTRAIT AND MOBILE-->
                         <div class="phone-image">
-                            <img src="images/2-iphone-right.png" class="img-responsive" alt="">
+                            <img src="images/single-iphone.png" class="img-responsive" alt="">
                         </div>
                     </div>
                 </div>
@@ -127,28 +131,15 @@
 ============================== -->
     <section class="services" id="services">
         <div class="container">
-            <!-- SECTION HEADER -->
-            <!-- <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-
-                <h2 class="white-text">It's Awesome</h2>
-                <div class="colored-line">
-                </div>
-                <div class="section-description">
-                    List your app features and all the details Lorem ipsum dolor kadr
-                </div>
-                <div class="colored-line">
-                </div>
-            </div> -->
-            <!-- /END SECTION HEADER -->
             <div class="row">
                 <div class="col-md-offset-2 col-md-8  single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-                    <h2><strong>¿Cómo funciona?</strong></h2>
-                    <p class="text-left lead">Escríbenos por <i class="fa-whatsapp fa"></i> Whatsapp al <span class="number">3044695058</span>, o a través de nuestra App, pidiéndonos lo que se te ocurra, y te daremos un precio y tiempo de entrega lo más rápido posible.
+                    <h2><strong>COMO UTILIZAR ANGEL APP</strong></h2>
+                    <p class="text-left lead">Bienvenido a AngelApp!</p>
+                    <p class="text-left lead">Cuando quieras algo, simplemente envíanos un mensaje a
                         <br>
+                        <br><i class="fa-whatsapp fa"></i><strong>(+57) 315 295 0725</strong> via WhatsApp
                         <br>
-                        <i class="icon_creditcard"></i> Los pagos se hacen online, con tarjeta de crédito, a través de <a href="http://www.braintree.com" target="_blank">Braintree</a> (la misma plataforma que usan Uber y Airbnb).
-                        <br>
-                        <br> Operamos soportados en la plataforma logística de <a href="https://www.lulo.com.co" target="_blank">www.lulo.com.co</a>
+                        <br> y te llevaremos tu pedido en menos de 1Hr, Servicio 24Hrs.
                     </p>
                 </div>
             </div>
@@ -157,30 +148,129 @@
     </section>
     <!-- /END FEATURES SECTION -->
     <!-- =========================
-     DOWNLOAD NOW 
+     SERVICES
 ============================== -->
+    <section class="services" id="services">
+        <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                <!-- SECTION TITLE -->
+                <h2 class="light-text">It's Awesome</h2>
+                <div class="colored-line">
+                </div>
+                <div class="section-description">
+                    Estos son algunos ejemplos de lo que podemos hacer por ti
+                </div>
+                <div class="colored-line">
+                </div>
+            </div>
+            <!-- /END SECTION HEADER -->
+            <div class="row">
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SERVICE ICON -->
+                    <div class="service-icon">
+                        <i class="icon_cloud-upload_alt"></i>
+                    </div>
+                    <!-- SERVICE HEADING -->
+                    <h3>PEDIR COMIDA</h3>
+                    <!-- SERVICE DESCRIPTION -->
+                    <p class="text-left">
+                        Tienes hambre? quieres una pizza? Tacos? El corral? sushi o comida china? o la sopa especial que sólo que un tipo de restaurante tiene? sin importar el lugar donde te encuentres.
+                        <br>
+                        <br> Es sencillo envíanos un mensaje de whatsapp al <strong>(+57) 315 295 0725</strong>
+                        <br> - "Pizza por favor"
+                        <br> - "Ceasar Salad favor"
+                        <br> - "Dame 4 sándwiches de carne" y nos pondremos en contacto contigo.
+                    </p>
+                </div>
+                <div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SERVICE ICON -->
+                    <div class="service-icon">
+                        <i class="icon_gift_alt"></i>
+                    </div>
+                    <!-- SERVICE HEADING -->
+                    <h3>LICOR, CERVEZA O VINO</h3>
+                    <!-- SERVICE DESCRIPTION -->
+                    <p class="text-left">
+                        ¿Necesitas cervezas? Vino para la cena? O tener una fiesta en casa? envíanos un mensaje de whatsapp al <strong>(+57) 315 295 0725</strong> nosotros vamos lo compramos y te lo llevamos a donde desees en menos de 1hr.
+                        <br>
+                        <br> "Una botella de vino, por favor"
+                        <br> "Necesito cerveza para una fiesta"
+                        <br> "Tráeme una botella de Johnny Walker whisky"
+                    </p>
+                </div>
+                <!-- /END SINGLE SERVICE -->
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SERVICE ICON -->
+                    <div class="service-icon">
+                        <i class="icon_chat_alt"></i>
+                    </div>
+                    <!-- SERVICE HEADING -->
+                    <h3>COMPRAR LO QUE NECESITES </h3>
+                    <!-- SERVICE DESCRIPTION -->
+                    <p class="text-left">
+                        No importa si quieres Ropa, Electrodomésticos, Libros, juegos, cualquier cosa!
+                        <br>
+                        <br> "Comprame un Ipad, por favor"
+                        <br> "Comprame flores para mi novia, por favor"
+                        <br> "Cómprame una camiseta de Guess"
+                        <br> "No quiero taxi ni UBER, me consigues una camioneta, gracias”
+                        <br> "Me Reservas el hotel más económico en ...."
+                        <br> "Me Reserva un vuelo a ..."
+                    </p>
+                </div>
+                <!-- /END SINGLE SERVICE -->
+            </div>
+            <!-- /END ROW -->
+        </div>
+        <!-- /END CONTAINER -->
+    </section>
+    <!-- /END FEATURES SECTION -->
     <section class="download" id="download">
-        <div class="solid-color" style="background:white">
+        <div class="solid-color">
             <div class="container">
                 <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" style="color:#676767">
                     <!-- SECTION TITLE -->
-                    <h2 class="strong">Kiwi en Medios</h2>
-                    <div class="colored-line">
-                    </div>
+                    <h2 class="strong" style="color:white!important">PREGUNTAS FRECUENTES</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div>
-                            <a href="http://www.portafolio.co/especiales/innovacion-colombia-2015-startups-y-apps-crecimiento/startup-cumple-deseos-whatsapp-kiwi" target="_blank"><img src="images/media/portafolio.png"></a>
-                            <a href="http://pulsosocial.com/2015/04/16/kiwi-la-startup-de-los-domicilios-la-economia-on-demand-y-la-inteligencia-artificial/" target="_blank"><img src="images/media/pulso_social.png"></a>
-                            <a href="http://www.eltiempo.com/tecnosfera/tecnosfera-tv/kiwi-un-servicio-de-pedidos-por-whatsapp/16059236" target="_blank"><img src="images/media/eltiempo.png"></a>
-                            <a href="http://www.civico.com/bogota/noticias/conozca-kiwi-nuevo-servicio-de-mensajeria-y-domicilios" target="_blank"><img src="images/media/civico.png"></a>
-                            <a href="http://www.territoriocreativo.es/etc/2015/06/dileakiwi-la-transformacion-digital-del-servicio-a-domicilio-por-medio-de-whatsapp.html" target="_blank"><img src="images/media/tc.png"></a>
-                            <a href="http://www.elespectador.com/tecnologia/traves-de-kiwi-puedes-pedir-quieras-whatsapp-articulo-571203" target="_blank"><img src="images/media/elespectador.png"></a>
-                            <a href="http://www.xataka.com.co/otros/kiwi-el-servicio-de-mandados-por-whatsapp" target="_blank"><img src="images/media/xataka.png"></a>
-                            <a href="http://diarioadn.co/vida/tendencias/kiwi-la-nueva-aplicaci%C3%B3n-m%C3%B3vil-colombiana-1.162852?hootPostID=12737e5220dd31826be6bed775fc39f1" target="_blank"><img src="images/media/adnco.png"></a>
-                        </div>
+                    <div class="col-md-6 col-md-offset-3">
+                        <blockquote class="blockquote-reverse text-right">
+                            <p class="h3">¿Qué cosas puedo solicitar?</p>
+                            <p class="lead">Todo lo que quieras.</p>
+                        </blockquote>
+                        <br>
+                         <blockquote class="text-left">
+                            <p class="h3">¿Dónde estan disponibles?</p>
+                            <p class="lead">EE.UU.: (Miami, Los Angeles)<br>COLOMBIA: (Bogotá)</p>
+                        </blockquote>
+
+                        <blockquote class="blockquote-reverse">
+                            <p class="h3">¿¿Cómo se garantiza que el número de mi tarjeta de crédito se encontrara en un sitio seguro?</p>
+                            <p class="lead">Todo el proceso de pago está a cargo de la plataforma Stripe. Le enviaremos un HTTPS encriptado de 128 bits en el cual puedes hacer clic para introducir tu número de tarjeta de crédito. Nosotros no almacenamos tu número de tarjeta de crédito.</p>
+                        </blockquote>
+
+                         <blockquote class="text-left">
+                            <p class="h3">¿Cuánto cuesta?</p>
+                            <p class="lead">El escribirnos es completamente gratuito.<br>
+Luego de que sepamos que es lo que deseas, nosotros te haremos saber el precio total para que puedas confirmarnos y luego realizar la facturación.
+No hay cargos ocultos, y la propina está incluida.</p>
+                        </blockquote>
+
+                         <blockquote class="blockquote-reverse">
+                            <p class="h3">¿Cómo me cobran y saber dónde entregar, etc.?</p>
+                            <p class="lead">La primera vez que utilice AngelApp, vamos a pedir la información de su tarjeta de crédito, su dirección, etc. Después de eso, sabremos quien eres.</p>
+                        </blockquote>
+
+                         <blockquote class="text-left">
+                            <p class="h3">¿Con qué rapidez obtendré lo que quiero después hacer la confirmación del pedido?</p>
+                            <p class="lead">Tan pronto como sea posible.</p>
+                        </blockquote>
+
                     </div>
+
                     <!-- END COLUMN -->
                 </div>
                 <!-- END ROW -->
@@ -193,7 +283,7 @@
     <!-- =========================
      WRITE TO
 ============================== -->
-    <section class="download" id="download">
+   <!--  <section class="download" id="download">
         <div class="solid-color">
             <div class="container">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-md-offset-0">
@@ -207,10 +297,8 @@
                     </div>
                 </div>
             </div>
-            <!-- /END CONTAINER -->
         </div>
-        <!-- /END SOLID COLOR -->
-    </section>
+    </section> -->
     <!-- /WRITE TO SECTION -->
     <!-- =========================
      FOOTER 
@@ -220,16 +308,14 @@
         <div class="container">
             <!-- /END CONTACT BOX -->
             <!-- LOGO -->
-            
             <!-- SOCIAL ICONS -->
             <ul class="social-icons">
-                <li><a href=""><i class="social_facebook_square"></i></a></li>
-                <li><a href=""><i class="social_twitter_square"></i></a></li>
-                <li><a href=""><i class="social_pinterest_square"></i></a></li>
-                <li><a href=""><i class="social_googleplus_square"></i></a></li>
-                <li><a href=""><i class="social_instagram_square"></i></a></li>
-                <li><a href=""><i class="social_dribbble_square"></i></a></li>
-                <li><a href=""><i class="social_flickr_square"></i></a></li>
+                <li><a href="https://www.facebook.com/YourAngelApp
+" target="_blank"><i class="social_facebook_square"></i></a></li>
+                <li><a href=" https://twitter.com/yourAngelApp
+" target="_blank"><i class="social_twitter_square"></i></a></li>
+                <li><a href="https://instagram.com/angel_bogota
+" target="_blank"><i class="social_instagram_square"></i></a></li>
             </ul>
             <img src="images/logo.png" alt="Kiwi" class="img-responsive center-block" width="100px" style="padding-top:1em">
             <!-- COPYRIGHT TEXT -->
@@ -244,6 +330,8 @@
     <!-- =========================
      SCRIPTS 
 ============================== -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/i18n/defaults-*.min.js "></script> -->
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/smoothscroll.js"></script> -->
     <script src="js/jquery.scrollTo.min.js"></script>
@@ -257,6 +345,7 @@
     <script src="js/matchMedia.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
+    <script src="js/dom-i18n.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 
