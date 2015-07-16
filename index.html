@@ -82,14 +82,14 @@
                     <div class="row">
                         <div class="col-md-offset-5 col-md-3">
                             <img src="images/logo.png" alt="" width="200px">
-                            <h5 style="color:white;">Pide lo que se te ocurra.</h5>
+                            <h5 style="color:white;" data-translatable>Domicilios On-Demand, te llevamos todo lo que quieras! // Whatever you want On-Demand // Whatever you want On-Demand</h5>
                         </div>
                         <div class="col-md-offset-1 col-md-3">
                             I am in &nbsp
-                            <select class="selectpicker" data-width="auto">
-                                <option>Bogota'</option>
-                                <option>Los Angeles</option>
-                                <option>Miami</option>
+                            <select class="selectpicker select-city" data-width="auto">
+                                <option value="es-bogota" >Bogota'</option>
+                                <option value="en-losangeles">Los Angeles</option>
+                                <option value="en-miami">Miami</option>
                             </select>
                         </div>
                     </div>
@@ -98,18 +98,19 @@
                 <div class="row home-contents">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <!-- HEADING AND BUTTONS -->
-                        <div class="intro-section">
-                            <!-- WELCOM MESSAGE -->
-                            <!-- <h1 class="intro">Present your app in beautiful way with Kane.</h1> -->
+                        <div class="intro-section lang-sp city-bogota">
                             <p class="h3"><strong>Tenemos un ejército</strong> de personas entrenadas, para responder todas tus solicitudes. Pide lo que quieras, siempre y cuando sea legal.</p>
                             <p class="h3">Escríbenos por Whatsapp lo que quieres pedir. ¡Es así de fácil!</p>
                             <p class="h3"><i class="fa-whatsapp fa"></i> Escribe al <span class="number">3044695058</span></p>
                             <p class="h3"><small>También al <span class="number-alt">3016641983</span></small></p>
-                            <!-- <p class="h3">¿Estás en México? <a href="javascript:void(0)" onclick="toggleNumber()">Haz clic aquí</a></p> -->
-                            <!-- BUTTON -->
-                            <!--  <div class="buttons" id="download-button">
-                                <a href="#download" class="btn btn-default btn-lg standard-button"><i class="icon-app-download"></i>Download App</a>
-                            </div> -->
+                            <!-- /END BUTTONS -->
+                        </div>
+
+                        <div class="intro-section lang-en city-losangeles">
+                            <p class="h3"><strong>Tenemos un ejército</strong> de personas entrenadas, para responder todas tus solicitudes. Pide lo que quieras, siempre y cuando sea legal.</p>
+                            <p class="h3">Escríbenos por Whatsapp lo que quieres pedir. ¡Es así de fácil!</p>
+                            <p class="h3"><i class="fa-whatsapp fa"></i> Escribe al <span class="number">3044695058</span></p>
+                            <p class="h3"><small>También al <span class="number-alt">3016641983</span></small></p>
                             <!-- /END BUTTONS -->
                         </div>
                         <!-- /END HEADNING AND BUTTONS -->
@@ -276,7 +277,7 @@
      SCRIPTS 
 ============================== -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/i18n/defaults-*.min.js "></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/i18n/defaults-*.min.js "></script> -->
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/smoothscroll.js"></script> -->
     <script src="js/jquery.scrollTo.min.js"></script>
@@ -290,6 +291,7 @@
     <script src="js/matchMedia.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
+     <script src="js/dom-i18n.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 
