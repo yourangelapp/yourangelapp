@@ -724,6 +724,10 @@ object {
    SECTION:  FOOTER                
 -----------------------------------------*/
 
+footer{
+    background: white !important;
+}
+
 footer .contact-box {
     margin-bottom: 78px;
 }
@@ -739,6 +743,7 @@ footer .contact-box .contact-button {
     vertical-align: middle;
     margin-top: -40px;
     background: #232323;
+
     -webkit-box-shadow: 0px 0px 0px 3px #232323;
             box-shadow: 0px 0px 0px 3px #232323;
     -webkit-backface-visibility: hidden;
@@ -783,6 +788,7 @@ footer .contact-box .expanded-contact-form .textarea-box {
 footer .contact-box .expanded-contact-form .textarea-box:active,
 footer .contact-box .expanded-contact-form .textarea-box:focus,     {
     color: #FFF;
+
 }
 
 footer .social-icons {
@@ -805,4 +811,5 @@ footer .copyright {
     color: #808080;
     padding-top: 10px;
     margin-bottom: 50px;
+
 }
