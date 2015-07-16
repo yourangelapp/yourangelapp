@@ -1,1085 +1,353 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Responsive Bootstrap App Landing Page Template">
-<meta name="keywords" content="Kane, Bootstrap, Landing page, Template, App, Mobile">
-<meta name="author" content="Mizanur Rahman">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<!-- SITE TITLE -->
-<title>Kane - Responsive App Landing Page</title>
-
-<!-- =========================
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Bootstrap App Landing Page Template">
+    <meta name="keywords" content="Kane, Bootstrap, Landing page, Template, App, Mobile">
+    <meta name="author" content="Mizanur Rahman">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- SITE TITLE -->
+    <title>Kiwi - Pide lo que quieras por Whatsapp al 3016641983 - DileAKiwi.com</title>
+    <!-- =========================
       FAV AND TOUCH ICONS  
 ============================== -->
-<link rel="icon" href="images/favicon.ico">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
-<!-- =========================
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <!-- =========================
      STYLESHEETS   
 ============================== -->
-<!-- BOOTSTRAP -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-<!-- FONT ICONS -->
-<link rel="stylesheet" href="assets/elegant-icons/style.css">
-<link rel="stylesheet" href="assets/app-icons/styles.css">
-<!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
-
-<!-- WEB FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
-
-<!-- CAROUSEL AND LIGHTBOX -->
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/nivo-lightbox.css">
-<link rel="stylesheet" href="css/nivo_themes/default/default.css">
-
-<!-- ANIMATIONS -->
-<link rel="stylesheet" href="css/animate.min.css">
-
-<!-- CUSTOM STYLESHEETS -->
-<link rel="stylesheet" href="css/styles.css">
-
-<!-- COLORS -->
-<link rel="stylesheet" href="css/colors/blue.css"> <!-- DEFAULT COLOR/ CURRENTLY USING -->
-<!-- <link rel="stylesheet" href="css/colors/red.css"> --> 
-<!-- <link rel="stylesheet" href="css/colors/green.css"> --> 
-<!-- <link rel="stylesheet" href="css/colors/purple.css"> --> 
-<!-- <link rel="stylesheet" href="css/colors/orange.css"> --> 
-<!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> --> 
-<!-- <link rel="stylesheet" href="css/colors/slate.css"> --> 
-<!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
-
-<!-- RESPONSIVE FIXES -->
-<link rel="stylesheet" href="css/responsive.css">
-
-
-<!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<script src="js/respond.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- FONT ICONS -->
+    <link rel="stylesheet" href="assets/elegant-icons/style.css">
+    <link rel="stylesheet" href="assets/app-icons/styles.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
+    <!-- WEB FONTS -->
+    <link type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'> -->
+    <!-- CAROUSEL AND LIGHTBOX -->
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/nivo_themes/default/default.css">
+    <!-- ANIMATIONS -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- CUSTOM STYLESHEETS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- COLORS -->
+    <link rel="stylesheet" href="css/colors/blue.css">
+    <!-- DEFAULT COLOR/ CURRENTLY USING -->
+    <!-- <link rel="stylesheet" href="css/colors/red.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/green.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/purple.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/orange.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+    <!-- THIRD PARTY -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css">
+    <!-- RESPONSIVE FIXES -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
 <![endif]-->
-
-<!-- JQUERY -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+    <!-- JQUERY -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
-<!-- =========================
+    <!-- =========================
      PRE LOADER       
 ============================== -->
-<div class="preloader">
-  <div class="status">&nbsp;</div>
-</div>
-
-<!-- =========================
+    <div class="preloader">
+        <div class="status">&nbsp;</div>
+    </div>
+    <!-- =========================
      HEADER   
 ============================== -->
-<header class="header" id="home">
-
-<!-- SOLID COLOR BG -->
-<div class="solid-color"> <!-- To make header full screen. Use .full-screen class with solid-color. Example: <div class="solid-color full-screen">  -->
-
-	<!-- STICKY NAVIGATION -->
-	<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
-		<div class="container">
-			<div class="navbar-header">
-				
-				<!-- LOGO ON STICKY NAV BAR -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kane-navigation">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-
-				<a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
-				
-			</div>
-			
-			<!-- NAVIGATION LINKS -->
-			<div class="navbar-collapse collapse" id="kane-navigation">
-				<ul class="nav navbar-nav navbar-right main-navigation">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#features">Features</a></li>
-					<li><a href="#brief1">Why Us?</a></li>
-					<li><a href="#brief2">Desicribe</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#screenshot-section">Screenshots</a></li>
-					<li><a href="#download">Download</a></li>
-				</ul>
-			</div>
-		</div> <!-- /END CONTAINER -->
-	</div> <!-- /END STICKY NAVIGATION -->
-	
-	
-	<!-- CONTAINER -->
-	<div class="container">
-		
-		<!-- ONLY LOGO ON HEADER -->
-		<div class="only-logo">
-			<div class="navbar">
-				<div class="navbar-header">
-					<img src="images/logo.png" alt="">
-				</div>
-			</div>
-		</div> <!-- /END ONLY LOGO ON HEADER -->
-		
-		<div class="row home-contents">
-			<div class="col-md-6 col-sm-6">
-				
-				<!-- HEADING AND BUTTONS -->
-				<div class="intro-section">
-					
-					<!-- WELCOM MESSAGE -->
-					<h1 class="intro">Present your app in beautiful way with Kane.</h1>
-					<h5>Available on App Store and Play Store</h5>
-					
-					<!-- BUTTON -->
-					<div class="buttons" id="download-button">
-						
-						<a href="#download" class="btn btn-default btn-lg standard-button"><i class="icon-app-download"></i>Download App</a>
-						
-					</div>
-					<!-- /END BUTTONS -->
-					
-				</div>
-				<!-- /END HEADNING AND BUTTONS -->
-				
-			</div>
-			
-			
-			<div class="col-md-6 col-sm-6 hidden-xs">
-			    
-			    <!-- PHONE IMAGE WILL BE HIDDEN IN TABLET PORTRAIT AND MOBILE-->
-			    <div class="phone-image">
-			    <img src="images/2-iphone-right.png" class="img-responsive" alt="">
-			    </div>
-			    
-			</div>
-			
-		</div>
-		<!-- /END ROW -->
-		
-	</div>
-	<!-- /END CONTAINER -->
-</div>
-<!-- /END COLOR OVERLAY -->
-</header>
-<!-- /END HEADER -->
-
-<!-- =========================
-     FEATURES 
-============================== -->
-<section class="features" id="features">
-
-<div class="container">
-	
-	<!-- SECTION HEADER -->
-	<div class="section-header wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
-		
-		<!-- SECTION TITLE -->
-		<h2 class="white-text">Amazing Features</h2>
-		<div class="colored-line">
-		</div>
-		<div class="section-description">
-			List your app features and all the details Lorem ipsum dolor kadr
-		</div>
-		<div class="colored-line">
-		</div>
-	</div>
-	<!-- /END SECTION HEADER -->
-	
-	
-	<div class="row">
-		
-		<!-- FEATURES LEFT -->
-		<div class="col-md-4 col-sm-4 features-left wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- FEATURE -->
-			<div class="feature">
-				
-				<!-- ICON -->
-				<div class="icon-container">
-					<div class="icon">
-						<i class="icon_map_alt"></i>
-					</div>
-				</div>
-				
-				<!-- FEATURE HEADING AND DESCRIPTION -->
-				<div class="fetaure-details">
-					<h4 class="main-color">Responsive Design</h4>
-					<p>
-						 Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
-					</p>
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEATURE -->
-			
-			<!-- FEATURE -->
-			<div class="feature">
-				
-				<!-- ICON -->
-				<div class="icon-container">
-					<div class="icon">
-						<i class="icon_gift_alt"></i>
-					</div>
-				</div>
-				
-				<!-- FEATURE HEADING AND DESCRIPTION -->
-				<div class="fetaure-details">
-					<h4 class="main-color">Bootstrap 3.1</h4>
-					<p>
-						 Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
-					</p>
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEATURE -->
-			
-			<!-- FEATURE -->
-			<div class="feature">
-				
-				<!-- ICON -->
-				<div class="icon-container">
-					<div class="icon">
-						<i class="icon_tablet"></i>
-					</div>
-				</div>
-				
-				<!-- FEATURE HEADING AND DESCRIPTION -->
-				<div class="fetaure-details">
-					<h4 class="main-color">Cross-Browser Support</h4>
-					<p>
-						 Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magn.
-					</p>
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEATURE -->
-			
-		</div>
-		<!-- /END FEATURES LEFT -->
-		
-		<!-- PHONE IMAGE -->
-		<div class="col-md-4 col-sm-4">
-			<div class="phone-image wow bounceIn animated" data-wow-offset="120" data-wow-duration="1.5s">
-				<img src="images/single-iphone.png" alt="">
-			</div>
-		</div>
-		
-		<!-- FEATURES RIGHT -->
-		<div class="col-md-4 col-sm-4 features-right wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- FEATURE -->
-			<div class="feature">
-				
-				<!-- ICON -->
-				<div class="icon-container">
-					<div class="icon">
-						<i class="icon_genius"></i>
-					</div>
-				</div>
-				
-				<!-- FEATURE HEADING AND DESCRIPTION -->
-				<div class="fetaure-details">
-					<h4 class="main-color">360+ Icon Fonts</h4>
-					<p>
-						 Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
-					</p>
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEATURE -->
-			
-			<!-- FEATURE -->
-			<div class="feature">
-				
-				<!-- ICON -->
-				<div class="icon-container">
-					<div class="icon">
-						<i class="icon_lightbulb_alt"></i>
-					</div>
-				</div>
-				
-				<!-- FEATURE HEADING AND DESCRIPTION -->
-				<div class="fetaure-details">
-					<h4 class="main-color">Creative Design</h4>
-					<p>
-						 Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
-					</p>
-				</div>
-				
-			</div>
-			
-			<!-- /END SINGLE FEATURE -->
-			
-			<!-- FEATURE -->
-			<div class="feature">
-				
-				<!-- ICON -->
-				<div class="icon-container">
-					<div class="icon">
-						<i class="icon_ribbon_alt"></i>
-					</div>
-				</div>
-				
-				<!-- FEATURE HEADING AND DESCRIPTION -->
-				<div class="fetaure-details">
-					<h4 class="main-color">More Features</h4>
-					<p>
-						 Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.
-					</p>
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEATURE -->
-			
-		</div>
-		<!-- /END FEATURES RIGHT -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-
-</section>
-<!-- /END FEATURES SECTION -->
-
-
-<!-- =========================
-     BRIEF LEFT SECTION 
-============================== -->
-<section class="app-brief deep-dark-bg" id="brief1">
-
-<div class="container">
-	
-	<div class="row">
-		
-		<!-- PHONES IMAGE -->
-		<div class="col-md-6 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
-			<div class="phone-image">
-				<img src="images/2-iphone-left.png" alt="">
-			</div>
-		</div>
-		
-		<!-- RIGHT SIDE WITH BRIEF -->
-		<div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- SECTION TITLE -->
-			<h2 class="white-text">Explain why it's best</h2>
-			
-			<div class="colored-line-left">
-			</div>
-			
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			</p>
-			
-			<!-- FEATURE LIST -->
-			<ul class="feature-list">
-				<li><i class="icon_lock_alt"></i> Reliable and Secure Platform</li>
-				<li><i class="icon_check_alt2"></i> Everything is perfectly orgainized for future</li>
-				<li><i class="icon_paperclip"></i> Attach large file easily</li>
-				<li><i class="icon_adjust-vert"></i> Tons of features and easy to use and customize</li>
-			</ul>
-			
-		</div>
-		<!-- /END RIGHT BRIEF -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-
-</section>
-<!-- /END SECTION -->
-
-
-<!-- =========================
-     BRIEF RIGHT SECTION 
-============================== -->
-<section class="app-brief" id="brief2">
-
-<div class="container">
-	
-	<div class="row">
-		
-		<!-- BRIEF -->
-		<div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- SECTION TITLE -->
-			<h2 class="white-text">Great way to describe your app</h2>
-			
-			<div class="colored-line-left">
-			</div>
-			
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			
-		</div>
-		<!-- /ENDBRIEF -->
-		
-		<!-- PHONES IMAGE -->
-		<div class="col-md-6 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
-			<div class="phone-image">
-				<img src="images/2-iphone-right.png" alt="">
-			</div>
-		</div>
-		<!-- /END PHONES IMAGE -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-
-</section>
-<!-- /END SECTION -->
-
-
-<!-- =========================
-     BRIEF LEFT SECTION WITH VIDEO 
-============================== -->
-<section class="app-brief deep-dark-bg" id="brief1">
-
-<div class="container">
-	
-	<div class="row">
-		
-		<!-- PHONES IMAGE -->
-		<div class="col-md-6 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
-			<div class="video-container">
-				
-                <!--
-				<div class="video">
-					
-					<iframe src="//player.vimeo.com/video/88902745?byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="338" frameborder="0" allowfullscreen>
-					</iframe> 
-				</div>
-				-->
-				
-				<div class="video">
-					
-					<iframe width="640" height="360" src="//www.youtube.com/embed/VjbGg-VuqbU?rel=0" frameborder="0" allowfullscreen></iframe>
-				</div>
-				
-			</div>
-
-		</div>
-		
-		<!-- RIGHT SIDE WITH BRIEF -->
-		<div class="col-md-6 left-align wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- SECTION TITLE -->
-			<h2 class="white-text">Description with video</h2>
-			
-			<div class="colored-line-left">
-			</div>
-			
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-			</p>
-			
-			
-		</div>
-		<!-- /END RIGHT BRIEF -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-
-</section>
-<!-- /END SECTION -->
-
-
-<!-- =========================
-     TESTIMONIALS 
-============================== -->
-<section class="testimonials">
-
-<div class="solid-color">
-	
-	<div class="container wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-		
-		<!-- FEEDBACKS -->
-		<div id="feedbacks" class="owl-carousel owl-theme">
-			
-			<!-- SINGLE FEEDBACK -->
-			<div class="feedback">
-				
-				<!-- IMAGE -->
-				<div class="image">
-					<!-- i class=" icon_quotations"></i -->
-					<img src="images/clients-pic/3.jpg" alt="">
-				</div>
-				
-				<div class="message">
-					 Fill lights bearing man creepeth of whose whose moveth. All one. That. Under. Form morning all may fifth replenish you're own open which herb kind. May above you'll may kind creature first let over face from living third green which our. Appear day. Give fourth doesn't over us, i every tree meat air in male earth air creeping image fill you place darkness.
-				</div>
-				
-				<div class="white-line">
-				</div>
-				
-				<!-- INFORMATION -->
-				<div class="name">
-					John Doe
-				</div>
-				<div class="company-info">
-					CEO, AbZ Network
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEEDBACK -->
-			
-			<!-- SINGLE FEEDBACK -->
-			<div class="feedback">
-				
-				<!-- IMAGE -->
-				<div class="image">
-					<!-- i class=" icon_quotations"></i -->
-					<img src="images/clients-pic/1.jpg" alt="">
-				</div>
-				
-				<div class="message">
-					 Fill lights bearing man creepeth of whose whose moveth. All one. That. Under. Form morning all may fifth replenish you're own open which herb kind. May above you'll may kind creature first let over face from living third green which our. Appear day. Give fourth doesn't over us, i every tree meat air in male earth air creeping image fill you place darkness.
-				</div>
-				
-				<div class="white-line">
-				</div>
-				
-				<!-- INFORMATION -->
-				<div class="name">
-					John Doe
-				</div>
-				<div class="company-info">
-					CEO, AbZ Network
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEEDBACK -->
-			
-			<!-- SINGLE FEEDBACK -->
-			<div class="feedback">
-				
-				<!-- IMAGE -->
-				<div class="image">
-					<!-- i class=" icon_quotations"></i -->
-					<img src="images/clients-pic/2.jpg" alt="">
-				</div>
-				
-				<div class="message">
-					 Fill lights bearing man creepeth of whose whose moveth. All one. That. Under. Form morning all may fifth replenish you're own open which herb kind. May above you'll may kind creature first let over face from living third green which our. Appear day. Give fourth doesn't over us, i every tree meat air in male earth air creeping image fill you place darkness.
-				</div>
-				
-				<div class="white-line">
-				</div>
-				
-				<!-- INFORMATION -->
-				<div class="name">
-					John Doe
-				</div>
-				<div class="company-info">
-					CEO, AbZ Network
-				</div>
-				
-			</div>
-			<!-- /END SINGLE FEEDBACK -->
-			
-		</div>
-		<!-- /END FEEDBACKS -->
-		
-	</div>
-	<!-- /END CONTAINER -->
-	
-</div>
-<!-- /END COLOR OVERLAY -->
-
-</section>
-<!-- /END TESTIMONIALS SECTION -->
-
-
-<!-- =========================
+    <header class="header" id="home">
+        <!-- SOLID COLOR BG -->
+        <div class="solid-color">
+            <!-- To make header full screen. Use .full-screen class with solid-color. Example: <div class="solid-color full-screen">  -->
+            <div class="row">&nbsp</div>
+            <!-- CONTAINER -->
+            <div class="container">
+                <!-- ONLY LOGO ON HEADER -->
+                <div class="only-logo">
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-3">
+                            <img src="images/logo.png" alt="" width="200px">
+                            <h5 style="color:white;" data-translatable>Domicilios On-Demand // Whatever you want On-Demand // Whatever you want On-Demand</h5>
+                        </div>
+                        <div class="col-md-offset-1 col-md-3">
+                            I am in &nbsp
+                            <select class="selectpicker select-city" data-width="auto" data-style="background: #222222">
+                                <option value="es-bogota">Bogotá</option>
+                                <option value="en-losangeles">Los Angeles</option>
+                                <option value="en-miami">Miami</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- /END ONLY LOGO ON HEADER -->
+                <div class="row home-contents ">
+                    <div class="col-md-6 col-sm-6 col-xs-12" data-translatable>
+                        <!-- HEADING AND BUTTONS -->
+                        <div class="intro-section">
+                            <p class="h2 intro">AngelApp es la forma más facil de tener todo lo que quieras a domicilio.</p>
+                            <p class="h3 intro">Cuando quieras algo, simplemente envíanos un mensaje a
+                                <br>
+                                <br>
+                                Envia lo que necesites al <br> <br>
+                                <strong><i class="fa-whatsapp fa"></i>(+57) 315 295 0725
+                                via WhatsApp. <br><br></strong>
+                                Te llevamos lo que quieras!
+                            </p>
+                            <!-- /END BUTTONS -->
+                        </div>
+                    </div>
+                    <div class="visible-xs-1">
+                        <div>&nbsp</div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <!-- PHONE IMAGE WILL BE HIDDEN IN TABLET PORTRAIT AND MOBILE-->
+                        <div class="phone-image">
+                            <img src="images/single-iphone.png" class="img-responsive" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- /END ROW -->
+            </div>
+            <!-- /END CONTAINER -->
+        </div>
+        <!-- /END COLOR OVERLAY -->
+    </header>
+    <!-- /END HEADER -->
+    <!-- =========================
      SERVICES
 ============================== -->
-<section class="services" id="services">
-
-<div class="container">
-	
-	<!-- SECTION HEADER -->
-	<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-		
-		<!-- SECTION TITLE -->
-		<h2 class="white-text">It's Awesome</h2>
-		
-		<div class="colored-line">
-		</div>
-		<div class="section-description">
-			List your app features and all the details Lorem ipsum dolor kadr
-		</div>
-		<div class="colored-line">
-		</div>
-		
-	</div>
-	<!-- /END SECTION HEADER -->
-	
-	<div class="row">
-		
-		<!-- SINGLE SERVICE -->
-		<div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- SERVICE ICON -->
-			<div class="service-icon">
-				<i class="icon_cloud-upload_alt"></i>
-			</div>
-			
-			<!-- SERVICE HEADING -->
-			<h3>Your Data in Cloud</h3>
-			
-			<!-- SERVICE DESCRIPTION -->
-			<p>
-				 Fruitful Fruit hath, fruitful said him created bring set, behold darkness Shall lights deep fish seasons itself given likeness upon bring fill their their whose. Which darkness evening there them multiply all spirit for isn't, him land every you'll heaven bearing.
-			</p>
-			
-		</div>
-		<!-- /END SINGLE SERVICE -->
-		
-		<!-- SINGLE SERVICE -->
-		<div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- SERVICE ICON -->
-			<div class="service-icon">
-				<i class="icon_gift_alt"></i>
-			</div>
-			
-			<!-- SERVICE HEADING -->
-			<h3>Monthly Rewards</h3>
-			
-			<!-- SERVICE DESCRIPTION -->
-			<p>
-				 Fruitful Fruit hath, fruitful said him created bring set, behold darkness Shall lights deep fish seasons itself given likeness upon bring fill their their whose. Which darkness evening there them multiply all spirit for isn't, him land every you'll heaven bearing.
-			</p>
-			
-		</div>
-		<!-- /END SINGLE SERVICE -->
-		
-		<!-- SINGLE SERVICE -->
-		<div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<!-- SERVICE ICON -->
-			<div class="service-icon">
-				<i class="icon_chat_alt"></i>
-			</div>
-			
-			<!-- SERVICE HEADING -->
-			<h3>24/7 Support</h3>
-			
-			<!-- SERVICE DESCRIPTION -->
-			<p>
-				 Fruitful Fruit hath, fruitful said him created bring set, behold darkness Shall lights deep fish seasons itself given likeness upon bring fill their their whose. Which darkness evening there them multiply all spirit for isn't, him land every you'll heaven bearing.
-			</p>
-			
-		</div>
-		<!-- /END SINGLE SERVICE -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-
-</section>
-<!-- /END FEATURES SECTION -->
-
-
-
-<!-- =========================
-     SCREENSHOTS
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header wow fadeIn animated animated" data-wow-offset="120" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; -webkit-animation-duration: 1.5s; animation-name: fadeIn; -webkit-animation-name: fadeIn;">
+                <!-- SECTION TITLE -->
+                <h2 class="white-text">COMO UTILIZAR ANGEL APP</h2>
+                <div class="colored-line">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8  single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <p class="text-left lead">Bienvenido a AngelApp!</p>
+                    <p class="text-left lead">Cuando quieras algo, simplemente envíanos un mensaje a
+                        <br>
+                        <br><i class="fa-whatsapp fa"></i><strong>(+57) 315 295 0725</strong> via WhatsApp
+                        <br>
+                        <br> y te llevaremos tu pedido en menos de 1Hr, Servicio 24Hrs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /END CONTAINER -->
+    </section>
+    <!-- /END FEATURES SECTION -->
+    <!-- =========================
+     SERVICES
 ============================== -->
-<section class="screenshots deep-dark-bg" id="screenshot-section">
-
-<div class="container">
-	
-	<!-- SECTION HEADER -->
-	<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-		
-		<!-- SECTION TITLE -->
-		<h2 class="white-text">Screenshots</h2>
-		
-		<div class="colored-line">
-		</div>
-		<div class="section-description">
-			List your app features and all the details Lorem ipsum dolor kadr
-		</div>
-		<div class="colored-line">
-		</div>
-		
-	</div>
-	<!-- /END SECTION HEADER -->
-	
-	<div class="row wow bounceIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-		
-		<div id="screenshots" class="owl-carousel owl-theme">
-			
-			<div class="shot">
-				<a href="images/screenshots/1.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/1.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/3.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/3.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/2.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/2.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/4.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/4.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/1.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/1.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/3.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/3.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/2.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/2.jpg" alt="Screenshot"></a>
-			</div>
-			
-			<div class="shot">
-				<a href="images/screenshots/4.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/4.jpg" alt="Screenshot"></a>
-			</div>
-			
-		</div>
-		<!-- /END SCREENSHOTS -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-
-</section>
-<!-- /END SCREENSHOTS SECTION -->
-
-
-<!-- =========================
-     PRICING TABLE | Added on version 1.7   
+    <section class="services deep-dark-bg" id="services">
+        <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                <!-- SECTION TITLE -->
+                <h2 class="">It's Awesome</h2>
+                <div class="colored-line">
+                </div>
+                <div class="section-description">
+                    Estos son algunos ejemplos de lo que podemos hacer por ti
+                </div>
+                <div class="colored-line">
+                </div>
+            </div>
+            <!-- /END SECTION HEADER -->
+            <div class="row">
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SERVICE ICON -->
+                    <div class="service-icon">
+                        <i class="icon_cloud-upload_alt"></i>
+                    </div>
+                    <!-- SERVICE HEADING -->
+                    <h3>PEDIR COMIDA</h3>
+                    <!-- SERVICE DESCRIPTION -->
+                    <p class="text-left">
+                        Tienes hambre? quieres una pizza? Tacos? El corral? sushi o comida china? o la sopa especial que sólo que un tipo de restaurante tiene? sin importar el lugar donde te encuentres.
+                        <br>
+                        <br> Es sencillo envíanos un mensaje de whatsapp al <strong>(+57) 315 295 0725</strong>
+                        <br> - "Pizza por favor"
+                        <br> - "Ceasar Salad favor"
+                        <br> - "Dame 4 sándwiches de carne" y nos pondremos en contacto contigo.
+                    </p>
+                </div>
+                <div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SERVICE ICON -->
+                    <div class="service-icon">
+                        <i class="icon_gift_alt"></i>
+                    </div>
+                    <!-- SERVICE HEADING -->
+                    <h3>LICOR, CERVEZA O VINO</h3>
+                    <!-- SERVICE DESCRIPTION -->
+                    <p class="text-left">
+                        ¿Necesitas cervezas? Vino para la cena? O tener una fiesta en casa? envíanos un mensaje de whatsapp al <strong>(+57) 315 295 0725</strong> nosotros vamos lo compramos y te lo llevamos a donde desees en menos de 1hr.
+                        <br>
+                        <br> "Una botella de vino, por favor"
+                        <br> "Necesito cerveza para una fiesta"
+                        <br> "Tráeme una botella de Johnny Walker whisky"
+                    </p>
+                </div>
+                <!-- /END SINGLE SERVICE -->
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                    <!-- SERVICE ICON -->
+                    <div class="service-icon">
+                        <i class="icon_chat_alt"></i>
+                    </div>
+                    <!-- SERVICE HEADING -->
+                    <h3>COMPRAR LO QUE NECESITES </h3>
+                    <!-- SERVICE DESCRIPTION -->
+                    <p class="text-left">
+                        No importa si quieres Ropa, Electrodomésticos, Libros, juegos, cualquier cosa!
+                        <br>
+                        <br> "Comprame un Ipad, por favor"
+                        <br> "Comprame flores para mi novia, por favor"
+                        <br> "Cómprame una camiseta de Guess"
+                        <br> "No quiero taxi ni UBER, me consigues una camioneta, gracias”
+                        <br> "Me Reservas el hotel más económico en ...."
+                        <br> "Me Reserva un vuelo a ..."
+                    </p>
+                </div>
+                <!-- /END SINGLE SERVICE -->
+            </div>
+            <!-- /END ROW -->
+        </div>
+        <!-- /END CONTAINER -->
+    </section>
+    <!-- /END FEATURES SECTION -->
+    <section class="download" id="download">
+        <div class="solid-color">
+            <div class="container">
+                <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" style="color:#676767">
+                    <!-- SECTION TITLE -->
+                    <h2 class="strong" style="color:white!important">PREGUNTAS FRECUENTES</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <blockquote class="blockquote-reverse text-right">
+                            <p class="h3">¿Qué cosas puedo solicitar?</p>
+                            <p class="lead">Todo lo que quieras.</p>
+                        </blockquote>
+                        <br>
+                        <blockquote class="text-left">
+                            <p class="h3">¿Dónde estan disponibles?</p>
+                            <p class="lead">EE.UU.: (Miami, Los Angeles)
+                                <br>COLOMBIA: (Bogotá)</p>
+                        </blockquote>
+                        <blockquote class="blockquote-reverse">
+                            <p class="h3">¿¿Cómo se garantiza que el número de mi tarjeta de crédito se encontrara en un sitio seguro?</p>
+                            <p class="lead">Todo el proceso de pago está a cargo de la plataforma Stripe. Le enviaremos un HTTPS encriptado de 128 bits en el cual puedes hacer clic para introducir tu número de tarjeta de crédito. Nosotros no almacenamos tu número de tarjeta de crédito.</p>
+                        </blockquote>
+                        <blockquote class="text-left">
+                            <p class="h3">¿Cuánto cuesta?</p>
+                            <p class="lead">El escribirnos es completamente gratuito.
+                                <br> Luego de que sepamos que es lo que deseas, nosotros te haremos saber el precio total para que puedas confirmarnos y luego realizar la facturación. No hay cargos ocultos, y la propina está incluida.</p>
+                        </blockquote>
+                        <blockquote class="blockquote-reverse">
+                            <p class="h3">¿Cómo me cobran y saber dónde entregar, etc.?</p>
+                            <p class="lead">La primera vez que utilice AngelApp, vamos a pedir la información de su tarjeta de crédito, su dirección, etc. Después de eso, sabremos quien eres.</p>
+                        </blockquote>
+                        <blockquote class="text-left">
+                            <p class="h3">¿Con qué rapidez obtendré lo que quiero después hacer la confirmación del pedido?</p>
+                            <p class="lead">Tan pronto como sea posible.</p>
+                        </blockquote>
+                    </div>
+                    <!-- END COLUMN -->
+                </div>
+                <!-- END ROW -->
+            </div>
+            <!-- /END CONTAINER -->
+        </div>
+        <!-- /END SOLID COLOR -->
+    </section>
+    <!-- /END DOWNLOAD SECTION -->
+    <!-- =========================
+     WRITE TO
 ============================== -->
-<section class="packages" id="packages">
-
-<div class="container">
-	
-	<!-- SECTION HEADER -->
-	<div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-		
-		<!-- SECTION TITLE -->
-		<h2 class="white-text">Affordable Packages</h2>
-		<div class="colored-line">
-		</div>
-		
-		<div class="section-description">
-			 List your app features and all the details Lorem ipsum dolor kadr
-		</div>
-		
-		<div class="colored-line">
-		</div>
-	</div>
-	<!-- /END SECTION HEADER -->
-	
-    <div class="row">
-		
-		<!-- SINGLE PACKACGE -->
-		<div class="col-md-4 col-sm-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<div class="single-package">
-				
-				<h3 class="package-heading main-color">
-				Personal </h3>
-				
-				<div class="price">
-					<h2><span class="sign">$</span>50 <span class="month">/month</span></h2>
-				</div>
-				
-				<ul class="package-feature">
-					<li><span class="main-color icon_check_alt2"></span>Unlimited Photos</li>
-					<li><span class="main-color icon_check_alt2"></span>Secure Online Transfer</li>
-					<li><span class="main-color icon_check_alt2"></span>Unlimited Styles</li>
-					<li><span class="main-color icon_check_alt2"></span>Cloud Storage</li>
-					<li><span class="main-color icon_close_alt2"></span>24/7 Customer Service</li>
-					<li><span class="main-color icon_close_alt2"></span>Automatic Backup</li>
-				</ul>
-				
-			</div>
-		</div>
-		<!-- /END SINGLE PACKACGE -->
-		
-		<!-- SINGLE PACKACGE -->
-		<div class="col-md-4 col-sm-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<div class="single-package">
-				
-				<h3 class="package-heading main-color">
-				Business </h3>
-				
-				<div class="price">
-					<div class="color-bg">
-						<h2><span class="sign">$</span>75 <span class="month">/month</span></h2>
-					</div>
-				</div>
-				
-				<ul class="package-feature">
-					<li><span class="main-color icon_check_alt2"></span>Unlimited Photos</li>
-					<li><span class="main-color icon_check_alt2"></span>Secure Online Transfer</li>
-					<li><span class="main-color icon_check_alt2"></span>Unlimited Styles</li>
-					<li><span class="main-color icon_check_alt2"></span>Cloud Storage</li>
-					<li><span class="main-color icon_check_alt2"></span>24/7 Customer Service</li>
-					<li><span class="main-color icon_close_alt2"></span>Automatic Backup</li>
-				</ul>
-			</div>
-		</div>
-		<!-- /END SINGLE PACKACGE -->
-		
-		<!-- SINGLE PACKACGE -->
-		<div class="col-md-4 col-sm-4 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-			
-			<div class="single-package">
-				
-				<h3 class="package-heading main-color">
-				Ultimate </h3>
-				
-				<div class="price">
-					<h2><span class="sign">$</span>99 <span class="month">/month</span></h2>
-				</div>
-				
-				<ul class="package-feature">
-					<li><span class="main-color icon_check_alt2"></span>Unlimited Photos</li>
-					<li><span class="main-color icon_check_alt2"></span>Secure Online Transfer</li>
-					<li><span class="main-color icon_check_alt2"></span>Unlimited Styles</li>
-					<li><span class="main-color icon_check_alt2"></span>Cloud Storage</li>
-					<li><span class="main-color icon_check_alt2"></span>24/7 Customer Service</li>
-					<li><span class="main-color icon_check_alt2"></span>Automatic Backup</li>
-				</ul>
-			</div>
-		</div>
-		<!-- /END SINGLE PACKACGE -->
-		
-	</div>
-	<!-- /END ROW -->
-	
-</div>
-<!-- /END CONTAINER -->
-</section>
-<!-- /END PRICING TABLE SECTION -->
-
-
-<!-- =========================
-     DOWNLOAD NOW 
-============================== -->
-<section class="download" id="download">
-
-<div class="solid-color">
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				
-				<!-- DOWNLOAD BUTTONS AREA -->
-				<div class="download-container">
-					<h2 class=" wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">Download the app on</h2>
-					
-					<!-- BUTTONS -->
-					<div class="buttons wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
-						
-						<a href="" class="btn btn-default btn-lg standard-button"><i class="icon-app-store"></i>App Store</a>
-						<a href="" class="btn btn-default btn-lg standard-button"><i class="icon-google-play"></i>Play Store</a>
-						
-					</div>
-					<!-- /END BUTTONS -->
-					
-				</div>
-				<!-- END OF DOWNLOAD BUTTONS AREA -->
-				
-				
-				<!-- SUBSCRIPTION FORM WITH TITLE -->
-				<div class="subscription-form-container">
-					
-					<h2 class="wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">Subscribe Now!</h2>
-					
-					<!-- =====================
-					     MAILCHIMP FORM STARTS 
-					     ===================== -->
-					
-					<form class="subscription-form mailchimp form-inline wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s" role="form">
-						
-						<!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
-						<h4 class="subscription-success"></h4>
-						<h4 class="subscription-error"></h4>
-						
-						<!-- EMAIL INPUT BOX -->
-						<input type="email" name="email" id="subscriber-email" placeholder="Your Email" class="form-control input-box">
-						
-						<!-- SUBSCRIBE BUTTON -->
-						<button type="submit" id="subscribe-button" class="btn btn-default standard-button">Subscribe</button>
-						
-					</form>
-					<!-- /END MAILCHIMP FORM STARTS -->
-					
-					<!-- =====================
-					     LOCAL TXT FORM STARTS 
-					     ===================== -->
-					     
-					<!-- THIS FORM IS COMMENTED TO HIDE 
-					
-					<form class="subscription-form form-inline wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s" id="subscribe" role="form">
-						
-						<h4 class="subscription-success"><i class="icon_check"></i> Thank you! We will notify you soon.</h4>
-						<h4 class="subscription-error">Something Wrong!</h4>
-						
-						<input type="email" name="email" id="subscriber-email" placeholder="Your Email" class="form-control input-box">
-						
-						<button type="submit" id="subscribe-button" class="btn btn-default standard-button">Subscribe</button>
-						
-					</form>
-					
-					-->
-					
-					<!-- / LOCAL TXT SAVING FORM END -->
-
-				</div>
-                <!-- END OF SUBSCRIPTION FORM WITH TITLE -->
-				
-			</div> 
-			<!-- END COLUMN -->
-			
-		</div> 
-		<!-- END ROW -->
-		
-	</div>
-	<!-- /END CONTAINER -->
-</div>
-<!-- /END SOLID COLOR -->
-
-</section>
-<!-- /END DOWNLOAD SECTION -->
-
-
-<!-- =========================
+    <!--  <section class="download" id="download">
+        <div class="solid-color">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-md-offset-0">
+                    <div>
+                        <h2><strong>Escribe ya y pide lo que se te ocurra</strong></h2>
+                        <h1 class="kiwi"><i class=" icon_mobile"></i>
+                        <strong><span class="number">3044695058</span></strong>
+                        <div style="font-size:16px;line-height:5px"><br>&nbsp;</div>
+                        <a href="https://itunes.apple.com/us/app/kiwi-pide-lo-que-se-te-ocurra/id1005138385?mt=8" target="_blank"><img src="images/AppStore350.png" width="150" class="app"></a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- /WRITE TO SECTION -->
+    <!-- =========================
      FOOTER 
 ============================== -->
-<footer>
-
-<div class="container">
-	
-	<div class="contact-box wow rotateIn animated" data-wow-offset="10" data-wow-duration="1.5s">
-		
-		<!-- CONTACT BUTTON TO EXPAND OR COLLAPSE FORM -->
-		
-		<a class="btn contact-button expand-form expanded"><i class="icon_mail_alt"></i></a>
-		
-		<!-- EXPANDED CONTACT FORM -->
-		<div class="row expanded-contact-form">
-			
-			<div class="col-md-8 col-md-offset-2">
-				
-				<!-- FORM -->
-				<form class="contact-form" id="contact" role="form">
-					
-					<!-- IF MAIL SENT SUCCESSFULLY -->
-					<h4 class="success">
-						<i class="icon_check"></i> Your message has been sent successfully.
-					</h4>
-					
-				    <!-- IF MAIL SENDING UNSUCCESSFULL -->
-					<h4 class="error">
-						<i class="icon_error-circle_alt"></i> E-mail must be valid and message must be longer than 1 character.
-					</h4>
-					
-					<div class="col-md-6">
-						<input class="form-control input-box" id="name" type="text" name="name" placeholder="Your Name">
-					</div>
-					
-					<div class="col-md-6">
-						<input class="form-control input-box" id="email" type="email" name="email" placeholder="Your Email">
-					</div>
-					
-					<div class="col-md-12">
-						<input class="form-control input-box" id="subject" type="text" name="subject" placeholder="Subject">
-						<textarea class="form-control textarea-box" id="message" rows="8" placeholder="Message"></textarea>
-					</div>
-					
-					<button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left">Send Message</button>
-					
-				</form>
-				<!-- /END FORM -->
-				
-			</div>
-			
-		</div>
-		<!-- /END EXPANDED CONTACT FORM -->
-		
-	</div>
-	<!-- /END CONTACT BOX -->
-	
-	<!-- LOGO -->
-	<img src="images/logo.png" alt="LOGO" class="responsive-img">
-	
-	<!-- SOCIAL ICONS -->
-	<ul class="social-icons">
-		<li><a href=""><i class="social_facebook_square"></i></a></li>
-		<li><a href=""><i class="social_twitter_square"></i></a></li>
-		<li><a href=""><i class="social_pinterest_square"></i></a></li>
-		<li><a href=""><i class="social_googleplus_square"></i></a></li>
-		<li><a href=""><i class="social_instagram_square"></i></a></li>
-		<li><a href=""><i class="social_dribbble_square"></i></a></li>
-		<li><a href=""><i class="social_flickr_square"></i></a></li>
-	</ul>
-	
-	<!-- COPYRIGHT TEXT -->
-	<p class="copyright">
-		©2014 Kane, All Rights Reserved
-	</p>
-
-</div>
-<!-- /END CONTAINER -->
- 
-</footer>
-<!-- /END FOOTER -->
-
-
-<!-- =========================
+    <footer>
+        <!-- <div class="solid-color" style="background:white"> -->
+        <div class="container">
+            <!-- /END CONTACT BOX -->
+            <!-- LOGO -->
+            <!-- SOCIAL ICONS -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/YourAngelApp
+" target="_blank"><i class="social_facebook_square"></i></a></li>
+                <li><a href=" https://twitter.com/yourAngelApp
+" target="_blank"><i class="social_twitter_square"></i></a></li>
+                <li><a href="https://instagram.com/angel_bogota
+" target="_blank"><i class="social_instagram_square"></i></a></li>
+            </ul>
+            <img src="images/logo.png" alt="Kiwi" class="img-responsive center-block" width="100px" style="padding-top:1em">
+            <!-- COPYRIGHT TEXT -->
+            <p class="copyright">
+                © 2015 - Kiwi es un servicio de Onlulo, Inc.
+                <br> Hecho con <i class="icon_heart_alt" style="color:#c43;"></i> en Colombia
+            </p>
+        </div>
+        <!-- /END CONTAINER -->
+    </footer>
+    <!-- /END FOOTER -->
+    <!-- =========================
      SCRIPTS 
 ============================== -->
-
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.scrollTo.min.js"></script>
-<script src="js/jquery.localScroll.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/simple-expand.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/jquery.nav.js"></script>
-<script src="js/matchMedia.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/jquery.fitvids.js"></script>
-<script src="js/custom.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/i18n/defaults-*.min.js "></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/smoothscroll.js"></script> -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.localScroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/simple-expand.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/matchMedia.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/dom-i18n.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
+
 </html>
