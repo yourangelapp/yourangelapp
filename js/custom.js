@@ -45,7 +45,7 @@ jQuery(window).load(function() {
         if (window.i18n.currentLanguage !== currentSelection) {
             window.i18n.changeLanguage(currentSelection);
             window.i18n.currentLanguage = currentSelection;
-            console.log(window.i18n.currentLanguage);
+            // console.log(window.i18n.currentLanguage);
         }
     });
 
