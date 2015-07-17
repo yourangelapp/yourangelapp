@@ -2,6 +2,7 @@
 Kane - Responsive App Landing Page 1.7
 ======================================================================= */
 
+
 /* --------------------------------------
 =========================================
 GLOBAL STYLES
@@ -15,7 +16,7 @@ html {
 body {
     background: #232323;
     /*font-family: 'Roboto', sans-serif;*/
-    font-family: "Source Sans Pro","Helvetica","Arial","sans-serif";
+    font-family: "Source Sans Pro", "Helvetica", "Arial", "sans-serif";
     font-size: 18px;
     font-weight: 300;
     color: #c8c8c8;
@@ -50,7 +51,7 @@ body {
 
 a {
     -webkit-transition: all ease 0.25s;
-            transition: all ease 0.25s;
+    transition: all ease 0.25s;
 }
 
 a:hover {
@@ -62,9 +63,12 @@ a:hover {
     outline: inherit;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
     color: #ffffff;
 }
+
+
 /* Other fixes*/
 
 *,
@@ -72,7 +76,7 @@ textarea:focus, input:focus {
 *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 ul,
@@ -86,6 +90,7 @@ li {
 
 
 /* PRE LOADER */
+
 .preloader {
     position: fixed;
     top: 0;
@@ -109,7 +114,7 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
-            background-size: cover;
+    background-size: cover;
     margin: -20px 0 0 -20px;
 }
 
@@ -118,7 +123,9 @@ li {
    Typography                
 -----------------------------------------*/
 
+
 /* FONT FACE LOADER */
+
 @font-face {
     font-family: 'Lane';
     src: url('../fonts/lanenar_Lane.eot');
@@ -128,12 +135,12 @@ li {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
- 
     @font-face {
         font-family: 'Lane';
         src: url('../fonts/lanenar_Lane.svg#Lane') format('svg');
     }
 }
+
 
 /* HEADINGS */
 
@@ -170,6 +177,7 @@ h5 {
     font-weight: 300;
 }
 
+
 /*---------------------------------------
    CUSTOM BUTTON              
 -----------------------------------------*/
@@ -186,7 +194,7 @@ h5 {
     padding: 16px 25px 16px 25px;
     margin: 5px;
     -webkit-transition: all ease 0.25s;
-            transition: all ease 0.25s;
+    transition: all ease 0.25s;
 }
 
 .standard-button:hover,
@@ -239,6 +247,7 @@ h5 {
     padding-bottom: 10px;
 }
 
+
 /*---------------------------------------
    LINES          
 -----------------------------------------*/
@@ -266,11 +275,13 @@ h5 {
     height: 1px;
 }
 
+
 /*---------------------------------------
 =========================================
  **   SECTION STYLES                
 =========================================
 -----------------------------------------*/
+
 
 /*---------------------------------------
    SECTION:  HOME                 
@@ -285,36 +296,37 @@ header .full-screen {
     height: 100px;
 }
 
+
 /* TOP BAR WITH NAVIGATION */
 
 .sticky-navigation {
-  min-height: 60px;
-  background: #111111;
-  border: none;
-  padding: 0 !important;
-  margin-bottom: 0 !important;
-  -webkit-backface-visibility: hidden;
-  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
-          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+    min-height: 60px;
+    background: #111111;
+    border: none;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    -webkit-backface-visibility: hidden;
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
 }
 
 .sticky-navigation .navbar-header img {
-  max-height: 30px;
-  -webkit-backface-visibility: hidden;
+    max-height: 30px;
+    -webkit-backface-visibility: hidden;
 }
 
 .sticky-navigation .main-navigation .current a {
-  color: #FFFFFF;
-  position: relative;
-  outline: none;
+    color: #FFFFFF;
+    position: relative;
+    outline: none;
 }
 
 .sticky-navigation .main-navigation li a {
-  line-height: 30px;
-  font-weight: 400;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #c8c8c8;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #c8c8c8;
 }
 
 header .only-logo .navbar {
@@ -325,6 +337,7 @@ header .only-logo .navbar {
 header .only-logo .navbar .navbar-header {
     float: none;
 }
+
 
 /* INTRO */
 
@@ -346,8 +359,18 @@ header .phone-image {
     margin-bottom: 50px;
 }
 
-header .phone-image img {
+header .phone-image > img {
     width: 100%;
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+header .phone-image .screen {
+    position: absolute;
+    top: 108px;
+    left: 30px;
+    width: 293px;
 }
 
 header .intro-section .intro {
@@ -362,6 +385,7 @@ header .intro-section h5 {
 header .intro-section .buttons {
     margin-top: 35px;
 }
+
 
 /*---------------------------------------
    SECTION:  FEATURES                 
@@ -413,10 +437,10 @@ header .intro-section .buttons {
     font-size: 18px;
     text-align: center;
     -webkit-transition: all ease-in 0.25s;
-            transition: all ease-in 0.25s;
+    transition: all ease-in 0.25s;
     -webkit-background-clip: padding-box;
-           -moz-background-clip: padding;
-            background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
 }
 
 .features .phone-image {
@@ -496,7 +520,7 @@ object {
     background: transparent !important;
     margin: auto;
     margin-bottom: 50px;
-    margin-top: 40px; 
+    margin-top: 40px;
 }
 
 .video {
@@ -507,6 +531,7 @@ object {
 /*---------------------------------------
    SECTION:  TESTIMONIALS                 
 -----------------------------------------*/
+
 .testimonials {
     color: #ffffff;
 }
@@ -525,7 +550,7 @@ object {
     font-size: 24px;
     border: 2px solid transparent;
     -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
-            box-shadow: 0px 0px 0px 2px #ffffff;
+    box-shadow: 0px 0px 0px 2px #ffffff;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -565,7 +590,7 @@ object {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -593,7 +618,6 @@ object {
 }
 
 
-
 /*---------------------------------------
    SECTION:  SCREENSHOTS 
 -----------------------------------------*/
@@ -609,7 +633,7 @@ object {
     margin: 13px;
     border-radius: 4px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     display: block;
 }
 
@@ -639,14 +663,16 @@ object {
 
 .single-package .price {
     background: #222222;
-
 }
+
 .single-package .color-bg {
     background-color: !important;
 }
+
 .single-package .price h2 {
     color: #FFFFFF;
 }
+
 .single-package .price .sign {
     vertical-align: super;
     font-size: 20px;
@@ -659,17 +685,17 @@ object {
 }
 
 .single-package .package-feature {
-  margin-top: 25px;
-  margin-bottom: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .single-package .package-feature > li {
-  margin-top: 15px;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .single-package .package-feature > li > span {
-  margin-right: 7px;
+    margin-right: 7px;
 }
 
 
@@ -699,12 +725,12 @@ object {
     padding-left: 20px;
     width: 320px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     background: #FFF;
     border: 2px solid #FFF;
 }
 
-.download .subscription-form .input-box:focus, 
+.download .subscription-form .input-box:focus,
 .download .subscription-form .input-box:active {
     color: #000;
     font-weight: 400;
@@ -724,6 +750,10 @@ object {
    SECTION:  FOOTER                
 -----------------------------------------*/
 
+footer {
+    background: white !important;
+}
+
 footer .contact-box {
     margin-bottom: 78px;
 }
@@ -740,7 +770,7 @@ footer .contact-box .contact-button {
     margin-top: -40px;
     background: #232323;
     -webkit-box-shadow: 0px 0px 0px 3px #232323;
-            box-shadow: 0px 0px 0px 3px #232323;
+    box-shadow: 0px 0px 0px 3px #232323;
     -webkit-backface-visibility: hidden;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
@@ -766,7 +796,7 @@ footer .contact-box .expanded-contact-form .input-box {
     margin-top: 10px;
     height: 50px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     background: #222222;
     border: 1px solid #161616;
 }
@@ -775,13 +805,14 @@ footer .contact-box .expanded-contact-form .textarea-box {
     margin-top: 20px;
     margin-bottom: 20px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     background: #222222;
     border: 1px solid #161616;
 }
 
 footer .contact-box .expanded-contact-form .textarea-box:active,
-footer .contact-box .expanded-contact-form .textarea-box:focus,     {
+footer .contact-box .expanded-contact-form .textarea-box:focus,
+{
     color: #FFF;
 }
 

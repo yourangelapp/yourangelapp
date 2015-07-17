@@ -29,6 +29,7 @@ RESPONSIVE FIXES
         float: none;
         margin: auto;
     }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -69,6 +70,12 @@ RESPONSIVE FIXES
     header .phone-image {
         max-width: 265px;
         margin-top: 5%;
+    }
+
+    header .phone-image .screen {
+        top: 80px;
+        left: 21px;
+        width: 224px;
     }
 
     .features .features-left,
@@ -144,6 +151,7 @@ RESPONSIVE FIXES
         width: 80%;
         margin-bottom: 10px;
     }
+
 }
 
 @media (max-width: 480px) {

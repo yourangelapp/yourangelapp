@@ -15,6 +15,12 @@ jQuery(window).load(function() {
         defaultLanguage: 'es-bogota',
         currentLanguage: 'es-bogota',
     });
+
+    window.i18n['es-bogota'] = {
+        images: ['images/screenshots/es-bogota/IMG_5310.PNG', 'images/screenshots/es-bogota/IMG_5311.PNG', 'images/screenshots/es-bogota/IMG_5312.PNG', 'images/screenshots/es-bogota/IMG_5313.PNG', 'images/screenshots/es-bogota/IMG_5314.PNG']
+    };
+
+
     window.i18n.currentLanguage = 'es-bogota';
 
     $.get("https://freegeoip.net/json/", function(response) {
@@ -45,6 +51,29 @@ jQuery(window).load(function() {
             window.i18n.currentLanguage = currentSelection;
             console.log(window.i18n.currentLanguage);
         }
+    });
+
+    $(function() {
+       
+        var numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
+        var currentImgIndex = 0 % numberImages;
+        var currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
+
+        setInterval(function() {
+
+            numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
+
+            currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
+
+            var nextImgIndex = (currentImgIndex + 1) % numberImages;
+            var nextImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + nextImgIndex + ')');
+            nextImg.fadeIn(500, function() {
+                // console.log(currentImgIndex, nextImgIndex, numberImages);
+                currentImg.fadeOut(500);
+                currentImg = nextImg;
+                currentImgIndex = nextImgIndex;
+            });
+        }, 4000);
     });
 })
 
