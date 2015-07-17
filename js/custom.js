@@ -16,10 +16,6 @@ jQuery(window).load(function() {
         currentLanguage: 'es-bogota',
     });
 
-    window.i18n['es-bogota'] = {
-        images: ['images/screenshots/es-bogota/IMG_5310.PNG', 'images/screenshots/es-bogota/IMG_5311.PNG', 'images/screenshots/es-bogota/IMG_5312.PNG', 'images/screenshots/es-bogota/IMG_5313.PNG', 'images/screenshots/es-bogota/IMG_5314.PNG']
-    };
-
 
     window.i18n.currentLanguage = 'es-bogota';
 
@@ -49,7 +45,7 @@ jQuery(window).load(function() {
         if (window.i18n.currentLanguage !== currentSelection) {
             window.i18n.changeLanguage(currentSelection);
             window.i18n.currentLanguage = currentSelection;
-            console.log(window.i18n.currentLanguage);
+            // console.log(window.i18n.currentLanguage);
         }
     });
 
