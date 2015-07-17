@@ -53,28 +53,28 @@ jQuery(window).load(function() {
         }
     });
 
-    $(function() {
+    // $(function() {
        
-        var numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
-        var currentImgIndex = 0 % numberImages;
-        var currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
+    //     var numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
+    //     var currentImgIndex = 0 % numberImages;
+    //     var currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
 
-        setInterval(function() {
+    //     setInterval(function() {
 
-            numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
+    //         numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
 
-            currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
+    //         currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
 
-            var nextImgIndex = (currentImgIndex + 1) % numberImages;
-            var nextImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + nextImgIndex + ')');
-            nextImg.fadeIn(500, function() {
-                // console.log(currentImgIndex, nextImgIndex, numberImages);
-                currentImg.fadeOut(500);
-                currentImg = nextImg;
-                currentImgIndex = nextImgIndex;
-            });
-        }, 4000);
-    });
+    //         var nextImgIndex = (currentImgIndex + 1) % numberImages;
+    //         var nextImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + nextImgIndex + ')');
+    //         nextImg.fadeIn(500, function() {
+    //             // console.log(currentImgIndex, nextImgIndex, numberImages);
+    //             currentImg.fadeOut(500);
+    //             currentImg = nextImg;
+    //             currentImgIndex = nextImgIndex;
+    //         });
+    //     }, 4000);
+    // });
 })
 
 
