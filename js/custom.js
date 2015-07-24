@@ -50,19 +50,19 @@ jQuery(window).load(function() {
     });
 
     $(function() {
-       
-        var numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
+        var currentLanguage = window.i18n.currentLanguage;
+        var numberImages = $('.screens > .' + currentLanguage).children().size();
         var currentImgIndex = 0 % numberImages;
-        var currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
+        var currentImg = $('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
 
         setInterval(function() {
+            currentLanguage = window.i18n.currentLanguage;
+            numberImages = $('.screens > .' + currentLanguage).children().size();
 
-            numberImages = $('.screens > .' + window.i18n.currentLanguage).children().size();
-
-            currentImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + currentImgIndex + ')');
+            currentImg = $('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
 
             var nextImgIndex = (currentImgIndex + 1) % numberImages;
-            var nextImg = $('.screens > .' + window.i18n.currentLanguage + ' > :eq(' + nextImgIndex + ')');
+            var nextImg = $('.screens > .' + currentLanguage + ' > :eq(' + nextImgIndex + ')');
             nextImg.fadeIn(500, function() {
                 // console.log(currentImgIndex, nextImgIndex, numberImages);
                 currentImg.fadeOut(500);
