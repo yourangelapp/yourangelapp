@@ -69,7 +69,7 @@ jQuery(window).load(function() {
                 currentImg = nextImg;
                 currentImgIndex = nextImgIndex;
             });
-        }, 3000);
+        }, 8000);
     });
 })
 
