@@ -63,10 +63,10 @@ a:hover {
     outline: inherit;
 }
 
-textarea:focus,
+/*textarea:focus,
 input:focus {
     color: #ffffff;
-}
+}*/
 
 
 /* Other fixes*/
