@@ -1,3 +1,5 @@
+ 
+
  $(document).on('ready', function() {
      window.userId = getParam('user');
      window.amount = getParam('amount');

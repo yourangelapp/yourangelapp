@@ -66,20 +66,13 @@
                     <p class="h3">Amount: <span class="amount"></p></span>
                 </div>
 
-                <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj" id="payment-form" method="POST">
+                <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false"  id="payment-form" method="POST">
                     <div class='row '>
                         <div class='col-md-6 form-group form-group-lg'>
                             <button class=' btn btn-primary btn-lg btn-block submit-button' type='submit'>Confirm</button>
                         </div>
                     </div>
 
-                    <div class='row'>
-                        <div class='col-md-12 error form-group hide'>
-                            <div class='alert-danger alert'>
-                                Please correct the errors and try again.
-                            </div>
-                        </div>
-                    </div>
                 </form>
             </div>
             <div class='col-xs-12 col-sm-0 col-md-3'></div>
@@ -92,9 +85,6 @@
             results = regex.exec(location.search);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-
-
-
 
 
     $(function() {
@@ -127,37 +117,16 @@
         $form.on('submit', function(e) {
             if (!$form.data('cc-on-file')) {
                 e.preventDefault();
-                Stripe.setPublishableKey($form.data('stripe-publishable-key'));
-                Stripe.createToken({
-                    number: $('.card-number').val(),
-                    cvc: $('.card-cvc').val(),
-                    exp_month: $('.card-expiry-month').val(),
-                    exp_year: $('.card-expiry-year').val()
-                }, stripeResponseHandler);
+                
             }
         });
-
-        function stripeResponseHandler(status, response) {
-            if (response.error) {
-                $('.error')
-                    .removeClass('hide')
-                    .find('.alert')
-                    .text(response.error.message);
-            } else {
-                // token contains id, last4, and card type
-                var token = response['id'];
-                // insert the token into the form so it gets submitted to the server
-                $form.find('input[type=text]').empty();
-                $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
-                $form.get(0).submit();
-            }
-        }
     })
     </script>
     <!-- <button id="customButton">Purchase</button> -->
     <!-- =========================
      SCRIPTS 
 ============================== -->
+    <script src="js/env.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="js/bootstrap.min.js"></script>
