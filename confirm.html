@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Bootstrap App Landing Page Template">
+    <meta name="keywords" content="Kane, Bootstrap, Landing page, Template, App, Mobile">
+    <meta name="author" content="Mizanur Rahman">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- SITE TITLE -->
+    <title>AngelApp</title>
+    <!-- =========================
+      FAV AND TOUCH ICONS  
+============================== -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <!-- =========================
+     STYLESHEETS   
+============================== -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- FONT ICONS -->
+    <!-- <link rel="stylesheet" href="css/nivo-lightbox.css"> -->
+    <!-- <link rel="stylesheet" href="css/nivo_themes/default/default.css"> -->
+    <!-- ANIMATIONS -->
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <!-- CUSTOM STYLESHEETS -->
+    <link rel="stylesheet" href="css/pay.css">
+    <!-- COLORS -->
+    <link rel="stylesheet" href="css/colors/blue.css">
+    <!-- DEFAULT COLOR/ CURRENTLY USING -->
+    <!-- <link rel="stylesheet" href="css/colors/red.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/green.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/purple.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/orange.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
+    <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+    <!-- THIRD PARTY -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css"> -->
+    <!-- RESPONSIVE FIXES -->
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
+<![endif]-->
+    <!-- JQUERY -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body id="pay">
+    <!-- =========================
+     PRE LOADER       
+============================== -->
+    <div class="preloader">
+        <div class="status">&nbsp;</div>
+    </div>
+    <div class="container-fluid">
+        <div class='row'>
+            <div class='col-xs-0 col-sm-0 col-md-3 col-lg-'></div>
+            <div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <div class="text-center">
+                    <img src="images/logo_only.png" class="center-block img-responsive" width="50px">
+                    <p class="h3">Amount: <span class="amount"></p></span>
+                </div>
+
+                <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false"  id="payment-form" method="POST">
+                    <div class='row '>
+                        <div class='col-md-6 form-group form-group-lg'>
+                            <button class=' btn btn-primary btn-lg btn-block submit-button' type='submit'>Confirm</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class='col-xs-12 col-sm-0 col-md-3'></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function getParam(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+
+    $(function() {
+        $('form.require-validation').bind('submit', function(e) {
+            var $form = $(e.target).closest('form'),
+                inputSelector = ['input[type=email]', 'input[type=password]',
+                    'input[type=text]', 'input[type=file]',
+                    'textarea'
+                ].join(', '),
+                $inputs = $form.find('.required').find(inputSelector),
+                $errorMessage = $form.find('div.error'),
+                valid = true;
+
+            $errorMessage.addClass('hide');
+            $('.has-error').removeClass('has-error');
+            $inputs.each(function(i, el) {
+                var $input = $(el);
+                if ($input.val() === '') {
+                    $input.parent().addClass('has-error');
+                    $errorMessage.removeClass('hide');
+                    e.preventDefault(); // cancel on first error
+                }
+            });
+        });
+    });
+
+    $(function() {
+        var $form = $("#payment-form");
+
+        $form.on('submit', function(e) {
+            if (!$form.data('cc-on-file')) {
+                e.preventDefault();
+                
+            }
+        });
+    })
+    </script>
+    <!-- <button id="customButton">Purchase</button> -->
+    <!-- =========================
+     SCRIPTS 
+============================== -->
+    <script src="js/env.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.localScroll.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/nivo-lightbox.min.js"></script>
+    <script src="js/simple-expand.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/matchMedia.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/dom-i18n.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/pay.js"></script>
+</body>
+
+</html>
