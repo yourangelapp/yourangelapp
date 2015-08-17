@@ -8,7 +8,7 @@
     <meta name="author" content="Mizanur Rahman">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- SITE TITLE -->
-    <title>AngelApp - Pide lo que quieras por Whatsapp al 3016641983 - AngelApp.com</title>
+    <title>AngelApp</title>
     <!-- =========================
       FAV AND TOUCH ICONS  
 ============================== -->
@@ -22,22 +22,12 @@
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- FONT ICONS -->
-    <link rel="stylesheet" href="assets/elegant-icons/style.css">
-    <link rel="stylesheet" href="assets/app-icons/styles.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
-    <!-- WEB FONTS -->
-    <link type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600">
-    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'> -->
-    <!-- CAROUSEL AND LIGHTBOX -->
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo_themes/default/default.css">
+    <!-- <link rel="stylesheet" href="css/nivo-lightbox.css"> -->
+    <!-- <link rel="stylesheet" href="css/nivo_themes/default/default.css"> -->
     <!-- ANIMATIONS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
     <!-- CUSTOM STYLESHEETS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pay.css">
     <!-- COLORS -->
     <link rel="stylesheet" href="css/colors/blue.css">
     <!-- DEFAULT COLOR/ CURRENTLY USING -->
@@ -49,59 +39,167 @@
     <!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
     <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
     <!-- THIRD PARTY -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css">
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css"> -->
     <!-- RESPONSIVE FIXES -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <!--[if lt IE 9]>
             <script src="js/html5shiv.js"></script>
             <script src="js/respond.min.js"></script>
 <![endif]-->
     <!-- JQUERY -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body id="pay">
     <!-- =========================
      PRE LOADER       
 ============================== -->
     <div class="preloader">
         <div class="status">&nbsp;</div>
     </div>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-    <!-- <button id="customButton">Purchase</button> -->
-    <script>
-    var handler = StripeCheckout.configure({
-        key: 'pk_test_ApOPRAAS7fGESXU5BjkJxoWS',
-        image: '/images/logo_only.png',
-        token: function(token) {
-            // Use the token to create the charge with a server-side script.
-            // You can access the token ID with `token.id`
-        }
-    });
+    <div class="container-fluid">
+        <div class='row'>
+            <div class='col-xs-0 col-sm-0 col-md-3'></div>
+            <div class='col-xs-12 col-sm-12 col-md-6'>
+                <div class="text-center">
+                    <img src="images/logo_only.png" class="center-block img-responsive" width="50px">
+                    <p class="h3">Amount: <span class="amount"></p></span>
+                </div>
 
-    $(window).on('load', function(e) {
-        // Open Checkout with further options
-        handler.open({
-            name: 'Angel App',
-            description: '2 widgets',
-            currency: "eur",
-            amount: 2000
+                <form accept-charset="UTF-8" action="/" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj" id="payment-form" method="POST">
+                    <div style="margin:0;padding:0;display:inline">
+                        <input name="utf8" type="hidden" value="✓" />
+                        <input name="_method" type="hidden" value="PUT" />
+                        <input name="authenticity_token" type="hidden" value="qLZ9cScer7ZxqulsUWazw4x3cSEzv899SP/7ThPCOV8=" />
+                    </div>
+                    <!-- <div class='form-row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>Name on Card</label>
+                            <input class='form-control' size='4' type='text'>
+                        </div>
+                    </div> -->
+                    <div class='form-row'>
+                        <div class='col-xs-12 col-sm-12 col-md-12 form-group card required'>
+                            <label class='control-label'>Card Number</label>
+                            <input autocomplete='off' class='form-control card-number' size='20' type='text'>
+                        </div>
+                    </div>
+                    <div class='form-row'>
+                        <div class='col-xs-4 form-group cvc required'>
+                            <label class='control-label'>CVC</label>
+                            <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
+                        </div>
+                        <div class='col-xs-4 form-group expiration required'>
+                            <label class='control-label'>Expiration</label>
+                            <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                        </div>
+                        <div class='col-xs-4 form-group expiration required'>
+                            <label class='control-label'> </label>
+                            <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                        </div>
+                    </div>
+                    <!-- <div class='form-row'>
+                        <div class='col-md-12'>
+                            <div class='form-control total btn btn-info'>
+                                Total:
+                                <span class='amount'>$300</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class='form-row '>
+                        <div class='col-md-12 form-group form-group-lg'>
+                            <button class=' btn btn-primary btn-lg btn-block submit-button' type='submit'>Pay »</button>
+                        </div>
+                    </div>
+
+                    <div class='form-row'>
+                        <div class='col-md-12 error form-group hide'>
+                            <div class='alert-danger alert'>
+                                Please correct the errors and try again.
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class='col-xs-12 col-sm-0 col-md-3'></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function getParam(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+
+
+
+
+    $(function() {
+        $('form.require-validation').bind('submit', function(e) {
+            var $form = $(e.target).closest('form'),
+                inputSelector = ['input[type=email]', 'input[type=password]',
+                    'input[type=text]', 'input[type=file]',
+                    'textarea'
+                ].join(', '),
+                $inputs = $form.find('.required').find(inputSelector),
+                $errorMessage = $form.find('div.error'),
+                valid = true;
+
+            $errorMessage.addClass('hide');
+            $('.has-error').removeClass('has-error');
+            $inputs.each(function(i, el) {
+                var $input = $(el);
+                if ($input.val() === '') {
+                    $input.parent().addClass('has-error');
+                    $errorMessage.removeClass('hide');
+                    e.preventDefault(); // cancel on first error
+                }
+            });
         });
-        e.preventDefault();
     });
 
-    // Close Checkout on page navigation
-    $(window).on('popstate', function() {
-        handler.close();
-    });
+    $(function() {
+        var $form = $("#payment-form");
+
+        $form.on('submit', function(e) {
+            if (!$form.data('cc-on-file')) {
+                e.preventDefault();
+                Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+                Stripe.createToken({
+                    number: $('.card-number').val(),
+                    cvc: $('.card-cvc').val(),
+                    exp_month: $('.card-expiry-month').val(),
+                    exp_year: $('.card-expiry-year').val()
+                }, stripeResponseHandler);
+            }
+        });
+
+        function stripeResponseHandler(status, response) {
+            if (response.error) {
+                $('.error')
+                    .removeClass('hide')
+                    .find('.alert')
+                    .text(response.error.message);
+            } else {
+                // token contains id, last4, and card type
+                var token = response['id'];
+                // insert the token into the form so it gets submitted to the server
+                $form.find('input[type=text]').empty();
+                $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
+                $form.get(0).submit();
+            }
+        }
+    })
     </script>
+    <!-- <button id="customButton">Purchase</button> -->
     <!-- =========================
      SCRIPTS 
 ============================== -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="js/smoothscroll.js"></script> -->
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/jquery.localScroll.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -115,6 +213,7 @@
     <script src="js/jquery.fitvids.js"></script>
     <script src="js/dom-i18n.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/pay.js"></script>
 </body>
 
 </html>
