@@ -115,15 +115,12 @@
                             <div class='alert-danger alert' data-translatable>
                                 Por favor, corrija los errores y vuelva a intentarlo. // Please correct the errors and try again. // Please correct the errors and try again.
                             </div>
-
                         </div>
                         <div class='col-md-12 feedback form-group hide'>
                             <div class='alert alert-success' data-translatable>
-                                Por favor, corrija los errores y vuelva a intentarlo. // Please correct the errors and try again. // Please correct the errors and try again.
+                                Ok // Ok // Ok
                             </div>
-
                         </div>
-                        
                     </div>
                 </form>
             </div>
@@ -131,7 +128,6 @@
         </div>
     </div>
     <script type="text/javascript">
-    
     $(function() {
         $('form.require-validation').bind('submit', function(e) {
             var $form = $(e.target).closest('form'),
@@ -182,19 +178,30 @@
                 // insert the token into the form so it gets submitted to the server
                 $form.find('input[type=text]').empty();
                 $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
-                
+                 showMessage(false, 'Paying ...');
                 $.ajax({
-                    type: 'POST',
-                    url: 'http://dileakiwi.herokuapp.com/create/' + getParam('user') + '/' + token,
-                    dataType: 'json',
-                    success: function(resp) {
-                        alert('aaa');
-                    },
-                    error: function(resp) {
+                        type: 'POST',
+                        url: 'http://dileakiwi.herokuapp.com/create/' + getParam('user') + '/' + token,
+                        dataType: 'json',
+                    })
+                    .then(function(resp) {
+                        console.log('created', resp);
+                        return $.ajax({
+                            type: 'POST',
+                            url: 'http://dileakiwi.herokuapp.com/pay/' + getParam('user') + '/' + getParam('cur') +'/'+ getParam('amount')*100,
+                            dataType: 'json',
+                        })
+                    })
+                    .then(function(resp){
+                        $('button').prop('disabled', true).text('Thanks!')
+                        showMessage(false, 'Well done!!');
+                        console.log('paid',resp);
+                        return resp;
+                    })
+                    .fail(function(resp) {
                         console.log('error', resp);
-                        showMessage(true, 'error');
-                    }
-                });
+                        showMessage(true, resp.responseText);
+                    });
             }
 
         }
