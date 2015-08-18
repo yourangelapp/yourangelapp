@@ -187,7 +187,13 @@
                 $form.find('input[type=text]').empty();
                 $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
                 $form.get(0).submit();
+                $.post('http://dileakiwi.herokuapp.com/create/'+getParam('user')+'/'+token, {}, function(resp){
+                    console.log(resp);
+                });
             }
+
+
+
             return false;
         }
     })
