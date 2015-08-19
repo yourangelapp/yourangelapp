@@ -14,6 +14,7 @@ jQuery(window).load(function() {
         languages: ['es-bogota', 'en-losangeles', 'en-miami'],
         defaultLanguage: 'es-bogota',
         currentLanguage: 'es-bogota',
+        // currentLanguage: 'en-losangeles',
     });
 
 
@@ -35,7 +36,7 @@ jQuery(window).load(function() {
                 break;
 
             default:
-                currentSelection = 'es-bogota';
+                currentSelection = window.i18n.defaultLanguage;
                 break;
         }
 

@@ -73,13 +73,18 @@
                     </div>
                     <div class='row'>
                         <div class='col-md-12 error form-group hide'>
-                            <div class='alert-danger alert' data-translatable>
-                                Por favor, corrija los errores y vuelva a intentarlo. // Please correct the errors and try again. // Please correct the errors and try again.
+                            <div class='alert-danger alert' >
+                                <span data-translatable>Existe un problema con el pago, envianos un mensaje a // There was a problem with the payment, send us an email to // There was a problem with the payment, send us an email to </span> <a href="contact@yourangelapp.com" target="_top">contact@yourangelapp.com</a> <span data-translatable> y nosotros lo solucionaremos // and we'll fix this issue for you // and we'll fix this issue for you </span>
                             </div>
                         </div>
                         <div class='col-md-12 feedback form-group hide'>
                             <div class='alert alert-success' data-translatable>
-                                Ok // Ok // Ok
+                                
+                            </div>
+                        </div>
+                        <div class='col-md-12 validation form-group hide'>
+                            <div class='alert alert-warning' data-translatable>
+                                
                             </div>
                         </div>
                     </div>
@@ -134,14 +139,15 @@
 
             .then(function(resp) {
                 $('button').prop('disabled', true).text('Thanks!')
-                showMessage(false, 'Well done!!');
+                showMessage('feedback', 'Well done!!');
                 console.log('paid', resp);
                 return resp;
             })
 
             .fail(function(resp) {
                 console.log('error', resp);
-                showMessage(true, resp.responseText);
+
+                showMessage('error', '');
             });
             return false;
         });

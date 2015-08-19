@@ -112,13 +112,16 @@
                     </div>
                     <div class='row'>
                         <div class='col-md-12 error form-group hide'>
-                            <div class='alert-danger alert' data-translatable>
-                                Por favor, corrija los errores y vuelva a intentarlo. // Please correct the errors and try again. // Please correct the errors and try again.
+                            <div class='alert-danger alert'>
+                                <span data-translatable>Existe un problema con el pago, envianos un mensaje a // There was a problem with the payment, send us an email to // There was a problem with the payment, send us an email to </span> <a href="contact@yourangelapp.com" target="_top">contact@yourangelapp.com</a> <span data-translatable> y nosotros lo solucionaremos // and we'll fix this issue for you // and we'll fix this issue for you </span>
                             </div>
                         </div>
                         <div class='col-md-12 feedback form-group hide'>
                             <div class='alert alert-success' data-translatable>
-                                Ok // Ok // Ok
+                            </div>
+                        </div>
+                        <div class='col-md-12 validation form-group hide'>
+                            <div class='alert alert-warning' data-translatable>
                             </div>
                         </div>
                     </div>
@@ -171,36 +174,38 @@
 
         function stripeResponseHandler(status, response) {
             if (response.error) {
-                showMessage(true, response.error.message);
+                showMessage('validation', response.error.message);
             } else {
                 // token contains id, last4, and card type
                 var token = response['id'];
                 // insert the token into the form so it gets submitted to the server
                 $form.find('input[type=text]').empty();
                 $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
-                 showMessage(false, 'Paying ...');
+                showMessage(false, 'Paying ...');
                 $.ajax({
                         type: 'POST',
                         url: 'http://dileakiwi.herokuapp.com/create/' + getParam('user') + '/' + token,
                         dataType: 'json',
                     })
+                   
                     .then(function(resp) {
                         console.log('created', resp);
                         return $.ajax({
                             type: 'POST',
-                            url: 'http://dileakiwi.herokuapp.com/pay/' + getParam('user') + '/' + getParam('cur') +'/'+ getParam('amount')*100,
+                            url: 'http://dileakiwi.herokuapp.com/pay/' + getParam('user') + '/' + getParam('cur') + '/' + getParam('amount') * 100,
                             dataType: 'json',
                         })
+
                     })
-                    .then(function(resp){
+                    .then(function(resp) {
                         $('button').prop('disabled', true).text('Thanks!')
-                        showMessage(false, 'Well done!!');
-                        console.log('paid',resp);
+                        showMessage('feedback', 'Well done!!');
+                        console.log('paid', resp);
                         return resp;
                     })
                     .fail(function(resp) {
                         console.log('error', resp);
-                        showMessage(true, resp.responseText);
+                        showMessage('error', resp.responseText);
                     });
             }
 
