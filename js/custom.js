@@ -25,18 +25,22 @@ jQuery(window).load(function() {
             $('.number').html('5566751005');
             $('.number-alt').parent().parent().hide();
             i18n.changeLanguage('en-losangeles');
+            $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
+
 
         } else if ("Miami".toLowerCase() === response.city.toLowerCase()) {
 
             $('.number').html('5566751005');
             $('.number-alt').parent().parent().hide();
             i18n.changeLanguage('en-miami');
+            $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
 
         } else {
             //if("Bogotá".toLowerCase()===response.city.toLowerCase())
             $('.number').html('3044695058');
             $('.number-alt').parent().parent().show();
             i18n.changeLanguage('es-bogota');
+            $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota');
         }
     }, "jsonp");
 
@@ -45,6 +49,27 @@ jQuery(window).load(function() {
         if (window.i18n.currentLanguage !== currentSelection) {
             window.i18n.changeLanguage(currentSelection);
             window.i18n.currentLanguage = currentSelection;
+            switch (window.i18n.currentLanguage.toLowerCase()) {
+                case 'es-bogota':
+                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota');
+                break;
+
+                case 'en-losangeles':
+                    $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
+                break;
+
+                case 'en-miami':
+                    $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
+                break;
+
+                default:
+                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota')
+                break;
+
+
+            }
+
+
             // console.log(window.i18n.currentLanguage);
         }
     });
