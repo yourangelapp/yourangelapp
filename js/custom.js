@@ -17,7 +17,7 @@ jQuery(window).load(function() {
     });
 
 
-    window.i18n.currentLanguage = 'es-bogota';
+    // window.i18n.currentLanguage = 'es-bogota';
 
     $.get("https://freegeoip.net/json/", function(response) {
         var currentSelection = window.i18n.defaultLanguage;
@@ -38,9 +38,8 @@ jQuery(window).load(function() {
                 currentSelection = 'es-bogota';
                 break;
         }
-         $('.screens > .' + currentSelection).css('display','block');
-        changeLanguage(currentSelection);
 
+        changeLanguage(currentSelection);
     }, "jsonp");
 
     $('.select-city').click(function(value) {
@@ -70,14 +69,12 @@ jQuery(window).load(function() {
                 default:
                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota')
                     break;
-            }
-
-            
+            }            
             var oldInterval = window.carouselInterval;
             window.carouselInterval = startCarousel(window.i18n.currentLanguage, previousSelection);
-            clearInterval(oldInterval);
-            console.log(previousSelection, currentSelection, window.carouselInterval);
-
+            if(oldInterval){
+                clearInterval(oldInterval);    
+            }
         }
     };
 
@@ -87,15 +84,8 @@ jQuery(window).load(function() {
         
         $('.screens > .' + currentLanguage).css('display','block');
         var currentImgIndex = 0 % numberImages;
-        console.log('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
-
-
         var currentImg = $('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
-
         var output = setInterval(function() {
-
-            // currentLanguage = window.i18n.currentLanguage;
-            console.log('started');
             numberImages = $('.screens > .' + currentLanguage).children().size();
 
             currentImg = $('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
@@ -115,10 +105,6 @@ jQuery(window).load(function() {
         return output;
 
     }
-
-    $(function() {
-
-    });
 })
 
 
