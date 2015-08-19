@@ -20,68 +20,82 @@ jQuery(window).load(function() {
     window.i18n.currentLanguage = 'es-bogota';
 
     $.get("https://freegeoip.net/json/", function(response) {
-        if ("Los Angeles".toLowerCase() === response.city.toLowerCase()) {
+        var currentSelection = window.i18n.defaultLanguage;
+        switch (response.city.toLowerCase()) {
+            case "Los Angeles".toLowerCase():
+                currentSelection = 'en-losangeles';
+                break;
 
-            $('.number').html('5566751005');
-            $('.number-alt').parent().parent().hide();
-            i18n.changeLanguage('en-losangeles');
-            $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
+            case "Miami".toLowerCase():
+                currentSelection = 'en-miami';
+                break;
 
+            case "Bogotá".toLowerCase():
+                currentSelection = 'es-bogota';
+                break;
 
-        } else if ("Miami".toLowerCase() === response.city.toLowerCase()) {
-
-            $('.number').html('5566751005');
-            $('.number-alt').parent().parent().hide();
-            i18n.changeLanguage('en-miami');
-            $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
-
-        } else {
-            //if("Bogotá".toLowerCase()===response.city.toLowerCase())
-            $('.number').html('3044695058');
-            $('.number-alt').parent().parent().show();
-            i18n.changeLanguage('es-bogota');
-            $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota');
+            default:
+                currentSelection = 'es-bogota';
+                break;
         }
+         $('.screens > .' + currentSelection).css('display','block');
+        changeLanguage(currentSelection);
+
     }, "jsonp");
 
     $('.select-city').click(function(value) {
         var currentSelection = $('.selectpicker').val();
+        changeLanguage(currentSelection);
+
+    });
+
+    function changeLanguage(currentSelection) {
+        var previousSelection = window.i18n.currentLanguage;
         if (window.i18n.currentLanguage !== currentSelection) {
             window.i18n.changeLanguage(currentSelection);
             window.i18n.currentLanguage = currentSelection;
             switch (window.i18n.currentLanguage.toLowerCase()) {
                 case 'es-bogota':
-                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota');
-                break;
+                    $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota');
+                    break;
 
                 case 'en-losangeles':
                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
-                break;
+                    break;
 
                 case 'en-miami':
                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel.app');
-                break;
+                    break;
 
                 default:
-                     $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota')
-                break;
-
-
+                    $('.social_instagram_square').parent().attr('href', 'https://instagram.com/angel_bogota')
+                    break;
             }
 
+            
+            var oldInterval = window.carouselInterval;
+            window.carouselInterval = startCarousel(window.i18n.currentLanguage, previousSelection);
+            clearInterval(oldInterval);
+            console.log(previousSelection, currentSelection, window.carouselInterval);
 
-            // console.log(window.i18n.currentLanguage);
         }
-    });
+    };
 
-    $(function() {
-        var currentLanguage = window.i18n.currentLanguage;
-        var numberImages = $('.screens > .' + currentLanguage).children().size();
+
+    function startCarousel(currentLanguage, previousLanguage) {
+        var numberImages = $('.screens > .' + currentLanguage ).children().size();
+        
+        $('.screens > .' + currentLanguage).css('display','block');
         var currentImgIndex = 0 % numberImages;
+        console.log('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
+
+
         var currentImg = $('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
 
-        setInterval(function() {
-            currentLanguage = window.i18n.currentLanguage;
+        var output = setInterval(function() {
+
+            // currentLanguage = window.i18n.currentLanguage;
+            console.log('started');
             numberImages = $('.screens > .' + currentLanguage).children().size();
 
             currentImg = $('.screens > .' + currentLanguage + ' > :eq(' + currentImgIndex + ')');
@@ -93,8 +107,17 @@ jQuery(window).load(function() {
                 currentImg.fadeOut(500);
                 currentImg = nextImg;
                 currentImgIndex = nextImgIndex;
+
             });
-        }, 8000);
+            $('.screens > .' + previousLanguage).css('display','none');
+        }, 1000);
+
+        return output;
+
+    }
+
+    $(function() {
+
     });
 })
 
