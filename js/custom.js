@@ -100,7 +100,7 @@ jQuery(window).load(function() {
 
             });
             $('.screens > .' + previousLanguage).css('display','none');
-        }, 1000);
+        }, 8000);
 
         return output;
 
