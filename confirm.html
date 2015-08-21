@@ -133,7 +133,7 @@
             showMessage(false, 'Paying ...');
             $.ajax({
                 type: 'POST',
-                url: 'http://dileakiwi.herokuapp.com/pay/' + getParam('user') + '/' + getParam('cur') + '/' + getParam('amount') * 100,
+                url: window.env.apiPay + getParam('user') + '/' + getParam('cur') + '/' + getParam('amount') * 100,
                 dataType: 'json',
             })
 

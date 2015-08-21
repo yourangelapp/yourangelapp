@@ -33,7 +33,7 @@
                  .addClass('hide');
              $('.error')
                  .removeClass('hide')
-                 .find('.alert')
+                 .find('.alert');
                  // .text(message);
              break;
 
