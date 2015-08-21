@@ -184,7 +184,7 @@
                 showMessage(false, 'Paying ...');
                 $.ajax({
                         type: 'POST',
-                        url: 'http://dileakiwi.herokuapp.com/create/' + getParam('user') + '/' + token,
+                        url: window.env.apiCreate + getParam('user') + '/' + token,
                         dataType: 'json',
                     })
                    
@@ -192,7 +192,7 @@
                         console.log('created', resp);
                         return $.ajax({
                             type: 'POST',
-                            url: 'http://dileakiwi.herokuapp.com/pay/' + getParam('user') + '/' + getParam('cur') + '/' + getParam('amount') * 100,
+                            url: window.env.apiPay + getParam('user') + '/' + getParam('cur') + '/' + getParam('amount') * 100,
                             dataType: 'json',
                         })
 
