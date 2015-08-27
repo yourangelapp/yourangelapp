@@ -366,12 +366,23 @@ header .phone-image > img {
     margin-bottom: 50px;
 }
 
+/*@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}*/
+
 header .phone-image .screen {
     position: absolute;
-    top: 108px;
-    left: 30px;
-    width: 293px;
+    /*top: 108px;*/
+    /*left: 30px;*/
+    /*width: 293px;*/
+    top: 15%;
+    left: 9%;
+    width: 83%;
 }
+
+
 
 header .intro-section .intro {
     color: #ffffff;
